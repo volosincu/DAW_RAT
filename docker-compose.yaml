@@ -1,0 +1,15 @@
+version : '3'
+
+services:
+  daw-interactive:
+    container_name: usaturn/daw-open-api
+    build:
+      context: ./
+    environment:
+      - SHELL=/bin/bash
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/app
+
+    #command: [nginx-debug, '-g', 'daemon off;']
