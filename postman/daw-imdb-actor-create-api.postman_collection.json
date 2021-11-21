@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "0378a4de-9570-46ba-a852-061943135a0c",
+		"name": "daw-imdb-actor-create-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/v1/actor{is-andrei-grig}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Andrei Grigore\",\r\n    \"surname\": \"Sava\",\r\n    \"description\": \"Actor de teatru, Colegiul National M. Sadoveanu Iasi; Universitatea G. Enescu Iasi – Faculatea de Actorie\",\r\n    \"birthday\": \"11/05/1987\",\r\n    \"movies\": \"\",\r\n    \"plays\": \"Ivanov de A. P. Cehov, regie Vasea Blohat;Visul unei nopti de vara de W. Shakespeare, regie Radu Afrim;Cum am devenit stupid de Martin Page;Tartuffe de  Moliere, regie Vlad Massaci;Titus Andronicus de William Shakespeare, regia Charles Muller;Troienele de Euripide regie Andrei Serban\",\r\n    \"prizes\": \"\",\r\n    \"theatre\": \"Teatrul National Vasile Alecsandri Iasi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor{is-andreea-boboc}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Andreea\",\r\n    \"surname\": \"Boboc\",\r\n    \"description\": \"Actrita de teatru 2013 Universitatea de Arte George Enescu, Iasi; Facultatea de Compozitie muzicala, Pedagogie si Teatru în 2008\",\r\n    \"birthday\": \"07/15/1986\",\r\n    \"movies\": \"\",\r\n    \"plays\": \"Padurea de N. A. Ostrovski, regia Andrei Andreev;România! Te pup. de Bogdan Georgescu, regia: David Schwartz;Negustorul de timp de Matei Vișniec, regia: Ovidiu Lazăr;Nirvana de Liviu Cristian, regia: Liviu Cristian;Trei surori de A. P. Cehov, regia: Cristian Hadji-Culea\",\r\n    \"prizes\": \"Participare la Festivalul Dramaturgiei Românești, Timișoara, 2007; Participare la Festivalul Dramaturgiei Românești, Timișoara, 2009; Participare la Bienala Teatrului Eugene Ionesco, Chișinău, 2010\",\r\n    \"theatre\": \"Teatrul Naional Vasile Alecsandri Iasi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor{is-anca-lupu}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"Anca\",\r\n  \"surname\":\"Lupu\",\r\n  \"description\":\"Actrita de teatru 2013 Universitatea de Arte George Enescu, Iasi; Facultatea de Teatru, specializarea Arta Actorului și Arta actorului mânuitor de papusi;\",\r\n  \"birthday\":\"1991-02-08T22:00:00.000Z\",\r\n  \"movies\":\"\",\r\n  \"plays\":\"Crucifixion, regia Xavier Gens;Afacerea Est, regia Igor Cobileanski;Ecce Homo, regia Dimitar Kutmanov;Cameristele, regia Laura Dimbu;Hackerville, regia Igor Cobileanski si Miruna Lazarescu\",\r\n  \"prizes\":\"2008 Ideo Ideis; 2009  Premiul special al juriului, festivalul Amfiteatru, Botosani; 2014 Marele Premiu, Stefan Iordache, Premiul publicului\",\r\n  \"theatre\":\"Teatrul Naional Vasile Alecsandri Iasi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor{template}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"surname\": \"\",\r\n    \"description\": \"\",\r\n    \"birthday\": \"\",\r\n    \"movies\": \"\",\r\n    \"plays\": \"\",\r\n    \"prizes\": \"\",\r\n    \"theatre\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
