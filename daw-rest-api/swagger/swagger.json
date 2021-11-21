@@ -76,12 +76,18 @@
           "birthday": {
             "type": "string"
           },
-          "movies": {},
-          "plays": {},
+          "movies": {
+            "type": "string"
+          },
+          "plays": {
+            "type": "string"
+          },
           "foto": {
             "type": "string"
           },
-          "prizes": {}
+          "prizes": {
+            "type": "string"
+          }
         }
       },
       "movie": {
@@ -126,6 +132,46 @@
             "type": "boolean"
           },
           "releasedTimestamp": {
+            "type": "string"
+          }
+        }
+      },
+      "plays": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/plays-without-required-constraint"
+          }
+        ]
+      },
+      "plays-without-required-constraint": {
+        "type": "object",
+        "description": "Sails ORM Model **Plays**",
+        "properties": {
+          "createdAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "updatedAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "title": {
+            "type": "string"
+          },
+          "ratings": {
+            "type": "number",
+            "format": "double"
+          },
+          "cast": {},
+          "isReleased": {
+            "type": "boolean"
+          },
+          "releasedDate": {
             "type": "string"
           }
         }
@@ -374,57 +420,75 @@
         "parameters": [
           {
             "in": "query",
-            "name": "actorId",
+            "name": "name",
             "required": true,
             "schema": {
               "type": "string"
             },
-            "description": "Id pentru a identifica un Actor."
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "oneOf": [
-                    {
-                      "type": "string",
-                      "description": "Actor creat cu succes."
-                    },
-                    {
-                      "type": "string",
-                      "description": "The provided fullName, password and/or email address are invalid."
-                    }
-                  ]
-                }
-              }
-            }
+            "description": "Numele Actorului."
           },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        }
-      },
-      "get": {
-        "summary": "Actor",
-        "description": "This action if for select Actor entries.",
-        "tags": [
-          "Actor"
-        ],
-        "parameters": [
           {
             "in": "query",
-            "name": "actorId",
+            "name": "surname",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Prenumele Actorului."
+          },
+          {
+            "in": "query",
+            "name": "description",
             "required": true,
             "schema": {
               "type": "string"
             },
             "description": "Id pentru a identifica un Actor."
+          },
+          {
+            "in": "query",
+            "name": "birthday",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "data in formatul mm/dd/yyy"
+          },
+          {
+            "in": "query",
+            "name": "movies",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filmele in care actorul a jucat."
+          },
+          {
+            "in": "query",
+            "name": "plays",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Piesele in care actorul a jucat."
+          },
+          {
+            "in": "query",
+            "name": "prizes",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Premiile pe care actorul le-a primit, personal sau pentru filme si piese de teatru."
+          },
+          {
+            "in": "query",
+            "name": "theatre",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Teatrul in care joaca."
           }
         ],
         "responses": {
@@ -633,6 +697,100 @@
         }
       }
     },
+    "/api/v1/actor/movies/{actorId}": {
+      "get": {
+        "summary": "Actor Movies",
+        "description": "Aceast API este pentru a interoga filemele unui actor.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "actorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Id pentru a cauta filmele unui Actor."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare filme pentru actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "Apel interogare filme pentru actor este invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/actor/plays/{actorId}": {
+      "get": {
+        "summary": "Actor Plays",
+        "description": "Aceast API este pentru a interoga piesele unui actor.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "actorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Id pentru a cauta piesele unui Actor."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare piesele de teatru ale actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "Apel interogare piese de teatru pentru actor este invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
     "/api/v1/actor/{actorId}": {
       "get": {
         "summary": "Actor",
@@ -644,7 +802,7 @@
           {
             "in": "path",
             "name": "actorId",
-            "required": true,
+            "required": false,
             "schema": {
               "type": "string"
             },
@@ -660,7 +818,7 @@
                   "oneOf": [
                     {
                       "type": "string",
-                      "description": "Actor creat cu succes."
+                      "description": "Apel interogare model actor cu succes."
                     },
                     {
                       "type": "string",
