@@ -1,4 +1,4 @@
-const imdb = require("../../db");
+
 module.exports = {
 
 
@@ -11,7 +11,7 @@ module.exports = {
   inputs: {
 
       actorId: {
-        required: true,
+        required: false,
         type: 'string',
         description: 'Id pentru a identifica un Actor.',
         extendedDescription: 'Must be a valid actor id.',
@@ -22,7 +22,7 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'Actor creat cu succes.'
+      description: 'Apel interogare model actor cu succes.'
     },
 
     invalid: {
@@ -36,16 +36,22 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    sails.log("    ==============   ", JSON.stringify(inputs));
-    // const { actorId } = inputs;
+    sails.log("get-actor - daw inputs: ", JSON.stringify(inputs), Actor.count());
+    const { actorId } = inputs;
 
-    let result = [{name: "Angelina Jolie"}, {name: "Di Caprio"}, {name: "Florin Piersic"}]
-    if (!inputs){
-      return result;
+    if (Actor.count()>1000) {
+      return {error: "Numarul de intrari maxime a fost atins."};
     }
 
-    sails.log("    ==============   ", JSON.stringify(imdb.store));
-    return imdb.store.actor[0];
+    let result = [];
+    if (!actorId){
+      result = Actor.find();
+    } else {
+      result = Actor.findOne({id: actorId});
+    }
+
+    sails.log("get-actor - daw result: ", JSON.stringify(result));
+    return result;
 
   }
 
