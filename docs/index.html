@@ -1,65 +1,193 @@
 <!DOCTYPE html>
 <html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+    <head>
+        <meta charset="utf-8">
+        <title>Daw REST API Interactiv Tool</title>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;">Daw REST API Interactiv Tool</h1>
+        </header>
+            <section typeof="sa:AuthorsList" style="text-align: right;">
+                <h2>Authors</h2>
+                <ul style="text-align: right; list-style-position:inside;">
+                  <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person">
+                      <meta property="schema:givenName" content="Bogdan">
+                      <meta property="schema:familyName" content="Volosincu">
+                      <span property="schema:name">Bogdan Volosincu</span>
+                    </span>
+                    <a href="https://www.info.uaic.ro/" property="sa:roleAction" resource="#note1" rel="footnote">: MLC1</a>
+                    <ul>
+                      <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="bogdan.volosincu@gmail.com"
+                           property="schema:email">bogdan.volosincu@gmail.com</a>
+                      </li>
+                    </ul>
+                  </li>
 
-.bgimg {
-  background-image: url('/dawrestinteractiv/forestbridge.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+                  <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person">
+                      <meta property="schema:givenName" content="Andrei">
+                      <meta property="schema:familyName" content="Avram">
+                      <span property="schema:name">Andrei Avram</span>
+                    </span>
+                    <a href="https://www.info.uaic.ro/" property="sa:roleAction" resource="#note1" rel="footnote">: MLC1</a>
+                    <ul>
+                      <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="mailto:Andrei.Avram@info.uaic.ro"
+                           property="schema:email">Andrei.Avram@info.uaic.ro</a>
+                      </li>
+                    </ul>
+                  </li>
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
+                  <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person">
+                      <meta property="schema:givenName" content="Teodora">
+                      <meta property="schema:familyName" content="Hoamea">
+                      <span property="schema:name">Teodora Hoamea</span>
+                    </span>
+                    <a href="https://www.info.uaic.ro/" property="sa:roleAction" resource="#note1" rel="footnote">: MDS1</a>
+                    <ul>
+                      <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="mailto:teodora.hoamea@gmail.com"
+                           property="schema:email">teodora.hoamea@gmail.com</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+            
+              <section>
+                  <h3>Project description:</h3>
+                  <p>
+                    This web application is a framework that implements a tool that interacts by text with a REST API. For this,we used modeling vocabulary, taxonomies, thesaurus with RDF schema and SKOS and a database based on models.
+                  </p>
+              </section>
+             
+              <section>
+                  <h3>Requirements:</h3>
+                  <p>
+                    <ul style="text-align: left; list-style-position:inside;">
+                        <li> Business requirements:
+                            <ul>
+                                <li>R.A.T. should be able to recognize words in common language</li>
+                                <li>R.A.T should be able to send a request to the API and search in the clients databases</li>
+                                <li>R.A.T. should be able to return all the related results to the user search</li>
+                            </ul>
+                        </li>
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
+                        <li> User requirements:
+                            <ul>
+                                <li>The user should be able to enter a word in different languages (romanian/english) and receive results to his search</li>
+                                <li>The user should be able to click on a result an the he/she should be able to access the URL behind that result</li>
+                            </ul>
+                        </li>
+                        <li>Software requirements:</li>
+                        <ul>
+                            <li>Performance:</li>
+                            <ul>
+                                <li>The page should be able to sand a feedback to the user in less than 0.4 sec</li>
+                            </ul>
+                            <li>Usability:</li>
+                            <ul>
+                                <li>This app should be able to be access from any browser</li>
+                                <li>The operating systems shouldn't affect the functionality of the framework</li>
+                            </ul>
+                            <li>Other requirements: </li>
+                            <ul>
+                                <li>Frontend: HTML, Css, JavaScript, REACT</li>
+                                <li>Backend: NodeJs, Sails</li>
+                                <li>Testing: java, Selenium, Postman, K6</li>
+                                <li>OpenAPIs: Swagger</li>
+                            </ul>
+                        </ul>
+                      </ul>
+                  </p>
+              </section>
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+              <section>
+                  <h3>Preliminary Considerations:</h3>
+                  <ul style="text-align: left; list-style-position:inside;">
+                    <li>Internal data structures/models:</li>
+                    The internal data is organised in models based on sails v1.x. They represent a set of structured data, called records and correspond to a collection in the database. 
+                    Examples of models in this application:
+                    <ul>
+                        <li>Actor has the following attributes: id {string}, name {string}, surname {string}, birthday {string}, movies {json}, plays {json}, foto {json}, prizes {json}. </li>
+                        <li>Movie has the following attributes: id {string}, title {string}, cast {json}, isReleased {boolean}, isPlaying {boolean}, isSeries {boolean}, releasedTimestamp {string}</li>
+                        <li>Review has the following attributes: id {string}, starts{number}, comment {string}, movieId {string}</li>
+                        <li>User has the following attributes: emailAddress{string} (this attribute is required and unique), emailStatus{string} (default value = confirmed), emailChangeCandidate {string}, password {string} (this attribute is also required), fullName {string}(required), isSuperAdmin {boolean} (this attribute indicates if the user has extra permissions), passwordResetToken {string} (A unique token used to verify the user identity), passwordResetTokenExpiresAt {number}, emailProofToken {string}, emailProofTokenExpiresAt {number}, stripeCustomerId{string} (The id of the customer entry in Stripe associated with this user), hasBillingCard {boolean}, billingCardBrand {string}, billingCardLast4 {string}, billingCardExpMonth {string}, billingCardExpYear {string}, lastSeenAt {number}</li>
+                        <p>The models are accessed from within the controller, in this way the call model methods communicate with the database. </p>
+                        </ul>
+                    <li>External data sources:</li>
+                   <p>Because this application is an OpenAPI schema for movies, an external data source is Internet Movie Database, IMDb which is a massive online website directory housing tons of information related to films, TV programs, video games, internet streams and more.
 
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
-<body>
+                    The list of movie database APIs such as the Open Movie Database and Internet Movie 
+                    Database API can be accessed at the link: 
+                    <a href="https://rapidapi.com/collection/omdb-imdb-apis">https://rapidapi.com/collection/omdb-imdb-apis</a>
+                    </p>
+                </ul>
+              </section>
+              <section>
+                  <h3>Application flow: </h3>
+                  <p>The Proof of concept that we build exposes an OpenAPI schema for movies, similar to imdb.com
+                    From the graphic interface the user is able to query the data using natural language.
+                    The application will read the input from the user through an input text field.
+                    Behind the scenes the input will be sent first to a syntactic and semantic module that will analyze the text and with the results from the parser the application will create a query to map user's words with the OpenApi schema as best as it can.
+                    Example of scenarios: 
+                    When user enters inputs like: 
+                    <ol>
+                        <li>
+                            Movie with Angelina Jolie. => extract Subject, Object and map to movies titles, movies cast or actor name.
+                        </li>
+                        <li>
+                            Plays of Shakespeare. => map play to themes from OpenAPI schema like drama, movies, tragedy, theatre (query synsets from WordNet )
+                        </li>
+                        <li>
+                            Best movies from last year. => map adjectives to Reviews, to prizes won by movie, actors 
+                        </li>
+                    </ol> 
+                        To map the words from user input to OpenApi schema we also create a dictionary of semantic terms based on OpenAPI endpoints, parameters and data models.
+                                           
+                </p>
+              </section>
+              <section>
+                  <h3>Application architecture </h3>
+                  <p>
+                    Because this application requires a significant storage space and execution time as short as possible,  the architecture is one based on microservices and is using APIs to connect the services. In this way, the implementation is distributed and loosely coupled which leads to dynamic scalability and fault tolerance. 
+                    In this case, the actor enters the input into the UI Service which plays the role of the client. Then the user search is processed using a Controlled Vocabulary modeled by a RDF Schema and  it is created a request to a REST API gateway which redirects the request to multiple REST APIs parallel services. Each of them is connected to a database, over which the request will be made.
+                    In the opposite way, one of the databases is sending a feedback to its REST API service then to the getway. In the final stage, the user gets the response via UI Service.                     
+                  </p>
+              </section>
+              <section>
+                  <h3>Linked Data Principles: </h3>
+                  <p>In this section it will be to develop how this web application incorporates the Linked Data Principles. This principles refers to URIs:
+                    <ol>
+                        <li>
+                            Use URIs as names for things
+                        </li>
+                        <li>
+                            Use HTTP URIs so that people can look up those names.
+                        </li>
+                        <li>
+                            When someone looks up a URI, provide useful information.
+                        </li>
+                        <li>
+                            Include links to other URIs so that they can discover more things.
+                        </li>
+                    </ol>
+                    These four rules help keeping data interconnected and they represent the unexpected re-use of information which is the value added by the web.
+                    In this case, the response that the user is going to receive will be one or more URIs, based on how many results will be found in the database. Those  URIs will contain the URL address for a significant page for that keyword. 
+                    The first and the second rules are respected by providing the user HTTP URIs responses that respect semantic web technology.
+                    The third rule is applied by formatting every URI using RDF and the fourth rule is used if a user search a keyword, for example an actor, he/she will receive all the links related to that actor:
 
-<div class="bgimg">
-  <div class="topleft">
-    <p>	RAT (REST API Interactive Tool)</p>
-  </div>
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-    <p>35 days left</p>
-  </div>
-  <div class="bottomleft">
-    <p> Teodora Hoamea - teodora.hoamea@gmail.com</p>
-    <p>	Bogdan Volosincu - bogdan.volosincu@gmail.com</p>
-    <p>	Andrei Avram - </p>
-  </div>
-</div>
+                    When the user sends “john” a RDF file  will be created<http://RAT.org/john> then you it will be used the local identifiers within the file #smith, #Alan etc. 
 
-</body>
+                    This is how the RDF file will look like:
+                    
+                    The WWW architecture is going to return a global identifier  "http://RAT.org/john#Alan" to Alan.
+
+                </p>
+              </section>
+    </body>
 </html>
-
