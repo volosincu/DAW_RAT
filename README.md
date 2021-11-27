@@ -6,6 +6,8 @@
 
 ### [OpenApi](https://github.com/volosincu/dawrestinteractiv/blob/main/daw-rest-api/swagger/swagger.json) Lipeste continut in https://editor.swagger.io/ pentru o afisare API-ului intr-o interfata usor de vizualizat.
 
+### [Deployment](https://volosincu.github.io/dawrestinteractiv/) 
+
 
 --------------
 
@@ -13,7 +15,24 @@
 # Documentatie: 
 
 ## run with docker 
-TODO 
+Clone repo locally:
+`cd dawrestinteractiv`
+
+Run with docker-compose:
+`docker-compose run daw-interactive`
+
+Build and run locally 
+`docker build -t daw-open-api .`
+
+Run
+`docker run -p 51337:1337 daw-open-api`
+
+Tag a version:
+`docker tag daw-open-api <your-dockerID>/daw-open-api:alpha`
+
+Push version on your dockerid 
+`docker push daw-open-api:noiemb-27`
+
 
 ## Local setup description/steps done for creating the app 
 
