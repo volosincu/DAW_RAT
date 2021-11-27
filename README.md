@@ -2,6 +2,8 @@
 
 ### [Scholarly HTML](https://volosincu.github.io/dawrestinteractiv/) 
 
+### [App architecture](https://github.com/volosincu/dawrestinteractiv/tree/main/docs)
+
 ### [OpenApi](https://github.com/volosincu/dawrestinteractiv/blob/main/daw-rest-api/swagger/swagger.json) Lipeste continut in https://editor.swagger.io/ pentru o afisare API-ului intr-o interfata usor de vizualizat.
 
 
