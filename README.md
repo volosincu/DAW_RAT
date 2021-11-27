@@ -6,7 +6,7 @@
 
 ### [OpenApi](https://github.com/volosincu/dawrestinteractiv/blob/main/daw-rest-api/swagger/swagger.json) Lipeste continut in https://editor.swagger.io/ pentru o afisare API-ului intr-o interfata usor de vizualizat.
 
-### [Deployment API](https://volosincu.github.io/dawrestinteractiv/) 
+### [Demo Deployment API](http://188.215.55.136:51337/api/v1/actor) 
 
 
 --------------
