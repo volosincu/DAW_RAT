@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <style>
+        body { counter-reset: section }
+        h2 { counter-reset: sub-section }
+        h3 { counter-reset: composite }
+        h4 { counter-reset: detail }
+
+        h2:before{
+            counter-increment: section;
+            content: counter(section) " ";
+        }
+        h3:not(:only-of-type)::before{
+            counter-increment: sub-section;
+            content: counter(section) "." counter(sub-section) " ";
+        }
+      </style>
         <meta charset="utf-8">
         <title>Daw REST API Interactiv Tool</title>
     </head>
     <body>
+      <article resource="#" typeof="schema:ScholarlyArticle">
         <header>
-            <h1 style="text-align: center;">Daw REST API Interactiv Tool</h1>
+          <h1 property="schema:name" style="text-align: center;">Daw REST API Interactiv Tool</h1>
+          <p role="doc-subtitle" property="schema:alternateName" style="text-align: center;">
+           -Scholarly HTML-
+          </p>
         </header>
+      
             <section typeof="sa:AuthorsList" style="text-align: right;">
-                <h2>Authors</h2>
+                <h3>Authors</h3>
                 <ul style="text-align: right; list-style-position:inside;">
                   <li typeof="sa:ContributorRole" property="schema:author">
                     <span typeof="schema:Person">
@@ -35,7 +55,7 @@
                     <a href="https://www.info.uaic.ro/" property="sa:roleAction" resource="#note1" rel="footnote">: MLC1</a>
                     <ul>
                       <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-                        <a href="mailto:Andrei.Avram@info.uaic.ro"
+                        <a href="mailto:andrei.avram@info.uaic.ro"
                            property="schema:email">Andrei.Avram@info.uaic.ro</a>
                       </li>
                     </ul>
@@ -59,14 +79,14 @@
               </section>
             
               <section>
-                  <h3>Project description:</h3>
+                  <h2>Project description:</h2>
                   <p>
                     The developed web application (Daw REST API Interactive Tool) is a framework that implements a tool that interacts by text with a REST API. The following concepts will be used in the implementation: modeling vocabulary, taxonomies, thesaurus with RDF schema and SKOS and a database based on models.
                   </p>
               </section>
              
               <section>
-                  <h3>Requirements:</h3>
+                  <h2>Requirements:</h2>
                   <p>
                     <ul style="text-align: left; list-style-position:inside;">
                         <li> Business requirements:
@@ -107,7 +127,7 @@
               </section>
 
               <section>
-                  <h3>Preliminary Considerations:</h3>
+                  <h2>Preliminary Considerations:</h2>
                   <ul style="text-align: left; list-style-position:inside;">
                     <li>Internal data structures/models:</li>
                    <p> 
@@ -131,7 +151,7 @@
                 </ul>
               </section>
               <section>
-                  <h3>Application flow: </h3>
+                  <h2>Application flow: </h2>
                   <p>The Proof of concept that we build exposes an OpenAPI schema for movies, similar to IMDb.com.
                     From the graphic interface the user is able to query the data using natural language.
                     The application will read the input from the user through an input text field.
@@ -157,7 +177,7 @@
                 </p>
               </section>
               <section>
-                  <h3>Application architecture </h3>
+                  <h2>Application architecture </h2>
                   <p>
                     Because this application requires a significant storage space and execution time as short as possible,  the architecture is one based on microservices and is using APIs to connect the services. In this way, the implementation is distributed and loosely coupled which leads to dynamic scalability and fault tolerance.   
                   </p>
@@ -166,7 +186,7 @@
                   </p>
               </section>
               <section>
-                  <h3>Linked Data Principles: </h3>
+                  <h2>Linked Data Principles: </h2>
                   <p>In this section it will be developed how this web application incorporates the Linked Data Principles. This principles refers to URIs:
                     <ol>
                         <li>
@@ -192,68 +212,133 @@
                     When the user sends “john” a RDF file  will be created<http://RAT.org/john> then it will use the local identifiers within the file #smith, #Alan etc. </p>
                   <p>
                     This is how the RDF file will look like:
-                    <pre class="line-numbers">
-                      <code class="rdf">
-                    &lt;rdf:Description about="#john"&gt;
-                      &lt;fam:child rdf:Resource="#smith"&gt;
-                        &lt;fam:child rdf:Resource="#Alan"&gt;
-                          &lt;/rdf:Description&gt;
-                    </code>
-                    </pre>
+                    <semantics>
+                      <mrow>
+                        <pre class="line-numbers">
+                          <code class="rdf">
+                            <mspace width="0.222em"></mspace>
+                            <mo>&lt;rdf:Description about="#john"&gt;</mo>
+                            <mspace width="0.222em"></mspace>
+                            <msub><mi>&lt;fam:child rdf:Resource="#smith"&gt;</mi></msub>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>&lt;fam:child rdf:Resource="#Alan"&gt;</mi></msub>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>&lt;/rdf:Description&gt;</mi></msub>
+                          </code>
+                        </pre>
+                     </mrow>
+                    </semantics>
                   </p>
                   <p>The WWW architecture is going to return a global identifier  "http://RAT.org/john#Alan" to Alan.</p>
               </section>
               <section>
-                <h3>RDF - Schema</h3>
+                <h2>RDF - Schema</h2>
                 <p>Resource Description Framework is an open standard of the W3C to describe digital resources with semantic meanings. It describes digital resources by defining and using classes and properties. The RDF Schema will help in converting the user input into a language that the REST API can process and initialize the process. It facilitates the dialogue between the client and application.
                 </p>
                 <p>One of the formats that defines a statement in RDF is Turtle (.ttl) that is a syntax that has abbreviations, prefixes and is easier to read for humans.  The next exemple from <a href ="https://www.w3.org/TR/turtle/">W3</a> describes the relationship between Green Goblin and Spiderman:
                 </p>
                 <p>
-                  <pre class="line-numbers">
-                    <code class="turtle">
-                  @base &lt;http://example.org/&gt; .
-                  @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-                  @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-                  @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;.
-                  @prefix rel: &lt;http://www.perceive.net/schemas/relationship/&gt; .
-                  &lt;#green-goblin&gt;
-                  rel:enemyOf &lt;#spiderman&gt; ;
-                  a foaf:Person ;    # in the context of the Marvel universe
-                  foaf:name "Green Goblin" .
+                    <semantics>
+                      <mrow>
+                        <pre class="line-numbers">
+                          <code class="turtle">
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>@base &lt;http://example.org/&gt;.</mi></msub>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.</mi></msub>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.</mi></msub>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;.</mi></msub>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>@prefix rel: &lt;http://www.perceive.net/schemas/relationship/&gt;.</mi></msub>
 
-                  &lt;#spiderman&gt;
-                  rel:enemyOf &lt;#green-goblin&gt; ;
-                  a foaf:Person ;
-                  foaf:name "Spiderman", "Человек-паук"@ru .
-                    </code>
-                    </pre>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>&lt;#green-goblin&gt;</mi></msub>
+                            <msub><mi>  rel:enemyOf &lt;#spiderman&gt; ;</mi></msub>
+                            <msub><mi>  a foaf:Person ;    # in the context of the Marvel universe</mi></msub>
+                            <msub><mi>  foaf:name "Green Goblin".</mi></msub>
+
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>&lt;#spiderman&gt;</mi></msub>
+                            <msub><mi>  rel:enemyOf &lt;#green-goblin&gt;;</mi></msub>
+                            <msub><mi>  a foaf:Person;</mi></msub>
+                            <msub><mi>  foaf:name "Spiderman", "Человек-паук"@ru.</mi></msub>
+                          </code>
+                        </pre>
+                      </mrow>
+                    </semantics>
                   </p>
-                <p>rdf: domain and rdf: range are used to semantically describe and derive relationships between objects. The first one declares that a property belongs to one or more classes and the second one is used to deduce that a value of an instance belongs to one or more classes. 
+                <p><b>rdf: domain</b> and <b>rdf: range</b> are used to semantically describe and derive relationships between objects. The first one declares that a property belongs to one or more classes and the second one is used to deduce that a value of an instance belongs to one or more classes. 
                   The resources in RDF are linked globally because they are identified by IRI (International Resource Identifier) which is a generalization of URL. This will help convert the response from the database in a language that the user can easily understand. The IRI can be built using a prefix. For this, we have this example from <a href ="https://www.w3.org/TR/turtle/">W3</a>:
                   To write http://www.perceive.net/schemas/relationship/enemyOf using the original Turtle syntax for prefixed declaration:</p>
                   <p>
-                    <pre class="line-numbers">
-                      <code class="turtle">
-                    @prefix somePrefix: &lt;http://www.perceive.net/schemas/relationship/&gt;.
-                    &lt;http://example.org/#green-goblin&gt; somePrefix:enemyOf &lt;http://example.org/#spiderman&gt;
-                  </code>
-                </pre>
-                    </p>
+                    <semantics>
+                      <mrow>
+                        <pre class="line-numbers">
+                          <code class="turtle">
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>@prefix somePrefix: &lt;http://www.perceive.net/schemas/relationship/&gt;.</mi></msub>
+                            <mspace width="0.222em"></mspace><mspace width="0.222em"></mspace>
+                            <msub><mi>&lt;http://example.org/#green-goblin&gt; somePrefix:enemyOf &lt;http://example.org/#spiderman&gt;</mi></msub>
+                          </code>
+                        </pre>
+                      </mrow>
+                    </semantics>
+                  </p>
               </section>
             <section>
-              <h3>Conclusion</h3>
+              <h2>Conclusion</h2>
               <p>The application will convert the user input using RDF Schema and will send it to a REST API gateway and therefore to multiple parallel REST APIs that will search in databases in order to achieve an answer. The response for the user request will be an IRI/URL that will provide to him the information that he/she needs. </p>
             </section>
             <section>
-              <h3>Bibliography:</h3>
+              <h2>Bibliography:</h2>
               <ol>
-                <li>Turtle: <a href =" https://www.w3.org/TR/turtle/"> https://www.w3.org/TR/turtle/</a></li>
-                <li>RDF Schema: <a href ="https://www.clearbyte.org/?p=5895&lang=en">https://www.clearbyte.org/?p=5895&lang=en</a></li>
-                <li>Microservices: <a href ="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices">https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices</a></li>
-                <li>Microservices Architecture: <a href ="https://www.devteam.space/blog/microservice-architecture-examples-and-diagram/">https://www.devteam.space/blog/microservice-architecture-examples-and-diagram/</a></li>
-                <li>Swagger: <a href ="https://github.com/swagger-api/swagger-editor">https://github.com/swagger-api/swagger-editor</a></li>
+                <li typeof="schema:WebPage" role="doc-biblioentry"
+                resource=" https://www.w3.org/TR/turtle/"
+                property="schema:citation" id="1">
+                <cite property="schema:name">
+                Turtle: <a href =" https://www.w3.org/TR/turtle/"> https://www.w3.org/TR/turtle/</a>
+                </cite>
+                </li>
+
+                <li typeof="schema:WebPage" role="doc-biblioentry"
+                resource="https://www.clearbyte.org/?p=5895&lang=en"
+                property="schema:citation" id="2">
+                <cite property="schema:name">
+                RDF Schema: <a href ="https://www.clearbyte.org/?p=5895&lang=en">https://www.clearbyte.org/?p=5895&lang=en</a>
+                </cite>
+                </li>
+
+                <li typeof="schema:WebPage" role="doc-biblioentry"
+                resource="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices"
+                property="schema:citation" id="3">
+                <cite property="schema:name">
+                Microservices: <a href ="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices">https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices</a>
+                </cite>
+                </li>
+                 
+                <li typeof="schema:WebPage" role="doc-biblioentry"
+                resource="https://www.devteam.space/blog/microservice-architecture-examples-and-diagram/"
+                property="schema:citation" id="4">
+                <cite property="schema:name">
+                Microservices Architecture: <a href ="https://www.devteam.space/blog/microservice-architecture-examples-and-diagram/">https://www.devteam.space/blog/microservice-architecture-examples-and-diagram/</a>
+                </cite>
+                </li>
+                
+                <li typeof="schema:WebPage" role="doc-biblioentry"
+                resource="https://github.com/swagger-api/swagger-editor"
+                property="schema:citation" id="4">
+                <cite property="schema:name">
+                Swagger: <a href ="https://github.com/swagger-api/swagger-editor">https://github.com/swagger-api/swagger-editor</a>
+                </cite>
+                </li>
+               
               </ol>
             </section>
+        <meta property="schema:accessibilityFeature" content="alternativeText">
+        <meta property="schema:accessibilityFeature" content="MathML">
+        <meta property="schema:accessibilityHazard" content="noFlashingHazard">
+      </article>
     </body>
 </html>
