@@ -4,7 +4,7 @@ services:
   daw-interactive:
     container_name: usaturn/daw-open-api:latest
     build:
-      context: ./daw-rest-api
+      context: .
     environment:
       - SHELL=/bin/bash
     ports:
