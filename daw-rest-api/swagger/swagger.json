@@ -518,6 +518,51 @@
             "description": "Internal server error"
           }
         }
+      },
+      "get": {
+        "summary": "Actor",
+        "description": "This action if for select Actor entries.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "actorId",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Id pentru a identifica un Actor."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
       }
     },
     "/api/v1/account/logout": {

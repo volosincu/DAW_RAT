@@ -36,18 +36,19 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    sails.log("get-actor - daw inputs: ", JSON.stringify(inputs), Actor.count());
+    sails.log("get-actor - daw inputs: ", JSON.stringify(inputs));
     const { actorId } = inputs;
 
-    if (Actor.count()>1000) {
+    const limitRequests =  await Actor.count();
+    if (limitRequests>1000) {
       return {error: "Numarul de intrari maxime a fost atins."};
     }
 
     let result = [];
     if (!actorId){
-      result = Actor.find();
+      result = await Actor.find();
     } else {
-      result = Actor.findOne({id: actorId});
+      result = await Actor.findOne({id: actorId});
     }
 
     sails.log("get-actor - daw result: ", JSON.stringify(result));

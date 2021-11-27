@@ -64,8 +64,9 @@ module.exports.routes = {
   // actor 
   'POST  /api/v1/actor':                                 { action: 'actor/post-actor' },
   'GET   /api/v1/actor/:actorId':                        { action: 'actor/get-actor' },
+  'GET   /api/v1/actor':                                 { action: 'actor/get-actor' },
   'GET   /api/v1/actor/movies/:actorId':                 { action: 'actor/get-actor-movies' },
-  'GET   /api/v1/actor/plays/:actorId':                 { action: 'actor/get-actor-plays' },
+  'GET   /api/v1/actor/plays/:actorId':                  { action: 'actor/get-actor-plays' },
 
   // 'POST  /api/v1/observe-my-session':                 { action: 'observe-my-session', hasSocketFeatures: true },
 
