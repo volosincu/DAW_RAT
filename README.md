@@ -8,6 +8,15 @@
 
 ### [Demo Deployment API](http://188.215.55.136:51337/api/v1/actor) 
 
+Exemplu: 
+1.Interogare api actor: 
+
+http://188.215.55.136:51337/api/v1/actor
+
+`http://188.215.55.136:51337/api/v1/actor/<actorId>`
+
+Mai multe in directorul postman `dawrestinteractiv/postman`
+
 
 --------------
 
