@@ -1,0 +1,1001 @@
+<https://www.w3id.org/aservo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://www.w3id.org/aservo> <http://www.w3.org/2002/07/owl#versionIRI> <https://www.w3id.org/aservo> .
+<https://www.w3id.org/aservo> <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0" .
+<https://www.w3id.org/aservo> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology about Volcanic Eruption created by Juan Semitiel Saorín" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2001/XMLSchema#Date
+<http://www.w3.org/2001/XMLSchema#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2001/XMLSchema#Date> <http://www.w3.org/2000/01/rdf-schema#comment> "xsd:Date"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Location
+<http://www.w3.org/2003/01/geo/wgs84_pos#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Location> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/SpatialObject> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Location> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4envi/SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Location of the spatial thing related with a spatial object" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Location> <http://www.w3.org/2000/01/rdf-schema#label> "geo:Location" .
+# 
+# https://saref.etsi.org/core/hasMeasurement
+<https://saref.etsi.org/core/hasMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/hasMeasurement> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/core/isMeasurementOf> .
+<https://saref.etsi.org/core/hasMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://saref.etsi.org/core/hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://saref.etsi.org/core/hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://saref.etsi.org/core/hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Measures of a feature of interest" .
+<https://saref.etsi.org/core/hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "hasMeasurement" .
+# 
+# https://saref.etsi.org/core/hasProperty
+<https://saref.etsi.org/core/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/core/isPropertyOf> .
+<https://saref.etsi.org/core/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://saref.etsi.org/core/hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://saref.etsi.org/core/hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/Property> .
+<https://saref.etsi.org/core/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Property of a feature of interest" .
+<https://saref.etsi.org/core/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasProperty" .
+# 
+# https://saref.etsi.org/core/isMeasurementOf
+<https://saref.etsi.org/core/isMeasurementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/isMeasurementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://saref.etsi.org/core/isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://saref.etsi.org/core/isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://saref.etsi.org/core/isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The measurement related to a feature of interest" .
+<https://saref.etsi.org/core/isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#label> "isMeasurementOf" .
+# 
+# https://saref.etsi.org/core/isPropertyOf
+<https://saref.etsi.org/core/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://saref.etsi.org/core/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://saref.etsi.org/core/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Property> .
+<https://saref.etsi.org/core/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://saref.etsi.org/core/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Property related to a feature of interest" .
+<https://saref.etsi.org/core/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPropertyOf" .
+# 
+# https://saref.etsi.org/core/makeMeasurement
+<https://saref.etsi.org/core/makeMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/makeMeasurement> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/core/measurementMadeBy> .
+<https://saref.etsi.org/core/makeMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Device> .
+<https://saref.etsi.org/core/makeMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://saref.etsi.org/core/makeMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Device makes measurements" .
+<https://saref.etsi.org/core/makeMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "makeMeasurement" .
+# 
+# https://saref.etsi.org/core/measurementMadeBy
+<https://saref.etsi.org/core/measurementMadeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/measurementMadeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://saref.etsi.org/core/measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://saref.etsi.org/core/measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/Device> .
+<https://saref.etsi.org/core/measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Measurement its made by a device" .
+<https://saref.etsi.org/core/measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#label> "measurementMadeBy" .
+# 
+# https://saref.etsi.org/core/relatesToMeasurement
+<https://saref.etsi.org/core/relatesToMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/relatesToMeasurement> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/core/relatesToProperty> .
+<https://saref.etsi.org/core/relatesToMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://saref.etsi.org/core/relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Property> .
+<https://saref.etsi.org/core/relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://saref.etsi.org/core/relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Property relates to a measurement" .
+<https://saref.etsi.org/core/relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "relatesToMeasurement" .
+# 
+# https://saref.etsi.org/core/relatesToProperty
+<https://saref.etsi.org/core/relatesToProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://saref.etsi.org/core/relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://saref.etsi.org/core/relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/Property> .
+<https://saref.etsi.org/core/relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Measurement relates to a property" .
+<https://saref.etsi.org/core/relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#label> "relatesToProperty" .
+# 
+# https://www.w3id.org/aservo#causedBy
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3id.org/aservo:aservo#provokes> .
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PopulationRisks> .
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Populations risks caused by a volcanic eruption" .
+<https://www.w3id.org/aservo#causedBy> <http://www.w3.org/2000/01/rdf-schema#label> "causedBy" .
+# 
+# https://www.w3id.org/aservo#hasLocation
+<https://www.w3id.org/aservo#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/aservo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://www.w3id.org/aservo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4envi/SpatialObject> .
+<https://www.w3id.org/aservo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature of interest has a location represented by a spatial object" .
+<https://www.w3id.org/aservo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "hasLocation" .
+# 
+# https://www.w3id.org/aservo:aservo#provokes
+<https://www.w3id.org/aservo:aservo#provokes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/aservo:aservo#provokes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://www.w3id.org/aservo:aservo#provokes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo:aservo#provokes> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/aservo#PopulationRisks> .
+<https://www.w3id.org/aservo:aservo#provokes> <http://www.w3.org/2000/01/rdf-schema#comment> "A volcanic eruption provokes population risks" .
+<https://www.w3id.org/aservo:aservo#provokes> <http://www.w3.org/2000/01/rdf-schema#label> "provokes" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "Latitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "geo:lat" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lon
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> <http://www.w3.org/2000/01/rdf-schema#label> "geo:lon" .
+# 
+# https://www.w3id.org/aservo#hasArea
+<https://www.w3id.org/aservo#hasArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasArea> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Area of the lava flow" .
+<https://www.w3id.org/aservo#hasArea> <http://www.w3.org/2000/01/rdf-schema#label> "hasArea" .
+# 
+# https://www.w3id.org/aservo#hasCity
+<https://www.w3id.org/aservo#hasCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasCity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#AffectedPeople> .
+<https://www.w3id.org/aservo#hasCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/aservo#hasCity> <http://www.w3.org/2000/01/rdf-schema#comment> "City where affected people  live" .
+<https://www.w3id.org/aservo#hasCity> <http://www.w3.org/2000/01/rdf-schema#label> "hasCity" .
+# 
+# https://www.w3id.org/aservo#hasCount
+<https://www.w3id.org/aservo#hasCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#AffectedBuildings> .
+<https://www.w3id.org/aservo#hasCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#hasCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of affected buildings" .
+<https://www.w3id.org/aservo#hasCount> <http://www.w3.org/2000/01/rdf-schema#label> "hasCount" .
+# 
+# https://www.w3id.org/aservo#hasDate
+<https://www.w3id.org/aservo#hasDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Property> .
+<https://www.w3id.org/aservo#hasDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.w3id.org/aservo#hasDate> <http://www.w3.org/2000/01/rdf-schema#label> "hasDate" .
+# 
+# https://www.w3id.org/aservo#hasDepth
+<https://www.w3id.org/aservo#hasDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasDepth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasDepth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "The depth of a seismic activity" .
+<https://www.w3id.org/aservo#hasDepth> <http://www.w3.org/2000/01/rdf-schema#label> "hasDepth" .
+# 
+# https://www.w3id.org/aservo#hasDurationInDays
+<https://www.w3id.org/aservo#hasDurationInDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasDurationInDays> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasDurationInDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasDurationInDays> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#hasDurationInDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#hasDurationInDays> <http://www.w3.org/2000/01/rdf-schema#comment> "Days of duration of the volcanic eruption" .
+<https://www.w3id.org/aservo#hasDurationInDays> <http://www.w3.org/2000/01/rdf-schema#label> "hasDurationInDays" .
+# 
+# https://www.w3id.org/aservo#hasHectares
+<https://www.w3id.org/aservo#hasHectares> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasHectares> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasHectares> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasHectares> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasHectares> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasHectares> <http://www.w3.org/2000/01/rdf-schema#comment> "Hectares" .
+<https://www.w3id.org/aservo#hasHectares> <http://www.w3.org/2000/01/rdf-schema#label> "hasHectares" .
+# 
+# https://www.w3id.org/aservo#hasHourAverage
+<https://www.w3id.org/aservo#hasHourAverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasHourAverage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasHourAverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasHourAverage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo:aservo#AirQualityProperties> .
+<https://www.w3id.org/aservo#hasHourAverage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasHourAverage> <http://www.w3.org/2000/01/rdf-schema#comment> "Average in a hour" .
+<https://www.w3id.org/aservo#hasHourAverage> <http://www.w3.org/2000/01/rdf-schema#label> "hasHourAverage" .
+# 
+# https://www.w3id.org/aservo#hasIntensity
+<https://www.w3id.org/aservo#hasIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasIntensity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasIntensity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasIntensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasIntensity> <http://www.w3.org/2000/01/rdf-schema#comment> "The intensity of a seismic activity" .
+<https://www.w3id.org/aservo#hasIntensity> <http://www.w3.org/2000/01/rdf-schema#label> "hasIntensity" .
+# 
+# https://www.w3id.org/aservo#hasLongitude
+<https://www.w3id.org/aservo#hasLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The longitude of a seismic activity" .
+<https://www.w3id.org/aservo#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#label> "hasLongitude" .
+# 
+# https://www.w3id.org/aservo#hasMagnitude
+<https://www.w3id.org/aservo#hasMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasMagnitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasMagnitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasMagnitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Magnitude of seismic activity" .
+<https://www.w3id.org/aservo#hasMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "hasMagnitude" .
+# 
+# https://www.w3id.org/aservo#hasName
+<https://www.w3id.org/aservo#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/aservo#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the volcanic eruption" .
+<https://www.w3id.org/aservo#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "hasName" .
+# 
+# https://www.w3id.org/aservo#hasNumberOfMen
+<https://www.w3id.org/aservo#hasNumberOfMen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasNumberOfMen> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasNumberOfMen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasNumberOfMen> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#AffectedPeople> .
+<https://www.w3id.org/aservo#hasNumberOfMen> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#hasNumberOfMen> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of men afected by a volcanic eruption" .
+<https://www.w3id.org/aservo#hasNumberOfMen> <http://www.w3.org/2000/01/rdf-schema#label> "hasNumberOfMen" .
+# 
+# https://www.w3id.org/aservo#hasNumberOfWomen
+<https://www.w3id.org/aservo#hasNumberOfWomen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasNumberOfWomen> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasNumberOfWomen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasNumberOfWomen> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#AffectedPeople> .
+<https://www.w3id.org/aservo#hasNumberOfWomen> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#hasNumberOfWomen> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of men afected by a volcanic eruption" .
+<https://www.w3id.org/aservo#hasNumberOfWomen> <http://www.w3.org/2000/01/rdf-schema#label> "hasNumberOfWomen" .
+# 
+# https://www.w3id.org/aservo#hasPerimeter
+<https://www.w3id.org/aservo#hasPerimeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasPerimeter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasPerimeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasPerimeter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasPerimeter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasPerimeter> <http://www.w3.org/2000/01/rdf-schema#comment> "Perimeter of a lava flow" .
+<https://www.w3id.org/aservo#hasPerimeter> <http://www.w3.org/2000/01/rdf-schema#label> "hasPerimeter" .
+# 
+# https://www.w3id.org/aservo#hasSeismDate
+<https://www.w3id.org/aservo#hasSeismDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasSeismDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#SeismicActivity> .
+<https://www.w3id.org/aservo#hasSeismDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.w3id.org/aservo#hasSeismDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Datetime when the seism occurs" .
+<https://www.w3id.org/aservo#hasSeismDate> <http://www.w3.org/2000/01/rdf-schema#label> "hasSeismDate" .
+<https://www.w3id.org/aservo#hasSeismDate> <http://www.w3.org/2000/01/rdf-schema#sameAs> "hasDate" .
+# 
+# https://www.w3id.org/aservo#hasShapeArea
+<https://www.w3id.org/aservo#hasShapeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasShapeArea> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasShapeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasShapeArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#hasShapeArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasShapeArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape Area of a lava flow" .
+<https://www.w3id.org/aservo#hasShapeArea> <http://www.w3.org/2000/01/rdf-schema#label> "hasShapeArea" .
+# 
+# https://www.w3id.org/aservo#hasShapeLength
+<https://www.w3id.org/aservo#hasShapeLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasShapeLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasShapeLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasShapeLength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://www.w3id.org/aservo#hasShapeLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#hasShapeLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape length of a lava flow" .
+<https://www.w3id.org/aservo#hasShapeLength> <http://www.w3.org/2000/01/rdf-schema#label> "hasShapeLength" .
+# 
+# https://www.w3id.org/aservo#hasStartDate
+<https://www.w3id.org/aservo#hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.w3id.org/aservo#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "date the volcanic eruption occurred" .
+<https://www.w3id.org/aservo#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "hasStartDate" .
+# 
+# https://www.w3id.org/aservo#hasTime
+<https://www.w3id.org/aservo#hasTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo#hasTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Property> .
+<https://www.w3id.org/aservo#hasTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.w3id.org/aservo#hasTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure of time" .
+<https://www.w3id.org/aservo#hasTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasTime" .
+# 
+# https://www.w3id.org/aservo#hasVolcanicExplosivityIndex
+<https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "The Volcanic Explosivity Index of the volcan eruption" .
+<https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> <http://www.w3.org/2000/01/rdf-schema#label> "hasVolcanicExplosivityIndex" .
+# 
+# https://www.w3id.org/aservo:aservo#hasLatitude
+<https://www.w3id.org/aservo:aservo#hasLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/aservo:aservo#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://www.w3id.org/aservo:aservo#hasLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/aservo:aservo#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo:aservo#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo:aservo#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The latitude of a seismic activity" .
+<https://www.w3id.org/aservo:aservo#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#label> "hasLatitude" .
+# 
+# urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/aservo#AffectedBuildings> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse> <http://www.w3.org/2000/01/rdf-schema#comment> "Use of an affected building" .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse> <http://www.w3.org/2000/01/rdf-schema#label> "hasUse" .
+# 
+# urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4envi/Measurement> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of magnitude measure on a seismic activity" .
+<urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> <http://www.w3.org/2000/01/rdf-schema#label> "isMagnitudeType" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://saref.etsi.org/core/Device
+<https://saref.etsi.org/core/Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core/Device> <http://www.w3.org/2000/01/rdf-schema#comment> "The device used to measure somenthing"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://saref.etsi.org/core/Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# https://saref.etsi.org/core/FeatureOfInterest
+<https://saref.etsi.org/core/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Feature of interest"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://saref.etsi.org/core/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "FeatureOfInterest" .
+# 
+# https://saref.etsi.org/core/Property
+<https://saref.etsi.org/core/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Property of a thing"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://saref.etsi.org/core/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+# 
+# https://saref.etsi.org/saref4envi/Measurement
+<https://saref.etsi.org/saref4envi/Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/saref4envi/Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Measurement of a thing"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://saref.etsi.org/saref4envi/Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement" .
+# 
+# https://saref.etsi.org/saref4envi/SpatialObject
+<https://saref.etsi.org/saref4envi/SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/saref4envi/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial object"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://saref.etsi.org/saref4envi/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialObject" .
+# 
+# https://saref.etsi.org/saref4envi/SpatialThing
+<https://saref.etsi.org/saref4envi/SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/saref4envi/SpatialThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/saref4envi/SpatialObject> .
+<https://saref.etsi.org/saref4envi/SpatialThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial thing"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://saref.etsi.org/saref4envi/SpatialThing> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialThing" .
+# 
+# https://www.w3id.org/aservo#AffectedBuildings
+<https://www.w3id.org/aservo#AffectedBuildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#AffectedBuildings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#PopulationRisks> .
+<https://www.w3id.org/aservo#AffectedBuildings> <http://www.w3.org/2000/01/rdf-schema#comment> "The affected builidings"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#AffectedBuildings> <http://www.w3.org/2000/01/rdf-schema#label> "AffectedBuildings" .
+# 
+# https://www.w3id.org/aservo#AffectedPeople
+<https://www.w3id.org/aservo#AffectedPeople> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#AffectedPeople> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#PopulationRisks> .
+<https://www.w3id.org/aservo#AffectedPeople> <http://www.w3.org/2000/01/rdf-schema#comment> "The affected people"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#AffectedPeople> <http://www.w3.org/2000/01/rdf-schema#label> "AffectedPeople" .
+# 
+# https://www.w3id.org/aservo#AirQuality
+<https://www.w3id.org/aservo#AirQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#AirQuality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo:aservo#AirQualityProperties> .
+<https://www.w3id.org/aservo#AirQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality of the air in the area observed"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#AirQuality> <http://www.w3.org/2000/01/rdf-schema#label> "AirQuality" .
+# 
+# https://www.w3id.org/aservo#AirQualitySensor
+<https://www.w3id.org/aservo#AirQualitySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Device> .
+<https://www.w3id.org/aservo#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device to measure te air quality"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#label> "AirQualitySensor" .
+# 
+# https://www.w3id.org/aservo#Hawaiian
+<https://www.w3id.org/aservo#Hawaiian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#comment> "Hawaiian type of volcanic eruption" .
+<https://www.w3id.org/aservo#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#label> "Hawaiian" .
+# 
+# https://www.w3id.org/aservo#HawaiianStrombolian
+<https://www.w3id.org/aservo#HawaiianStrombolian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#HawaiianStrombolian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#HawaiianStrombolian> <http://www.w3.org/2000/01/rdf-schema#comment> "Hawaiian strombolian  type of volcanic eruption" .
+<https://www.w3id.org/aservo#HawaiianStrombolian> <http://www.w3.org/2000/01/rdf-schema#label> "HawaiianStrombolian" .
+# 
+# https://www.w3id.org/aservo#LavaFlow
+<https://www.w3id.org/aservo#LavaFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#LavaFlow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#LavaFlow> <http://www.w3.org/2000/01/rdf-schema#comment> "Lava flow from a volcanic eruption" .
+<https://www.w3id.org/aservo#LavaFlow> <http://www.w3.org/2000/01/rdf-schema#label> "LavaFlow" .
+# 
+# https://www.w3id.org/aservo#LavaFlowSensor
+<https://www.w3id.org/aservo#LavaFlowSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#LavaFlowSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Device> .
+<https://www.w3id.org/aservo#LavaFlowSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device to measure the lava flow parameters"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#LavaFlowSensor> <http://www.w3.org/2000/01/rdf-schema#label> "LavaFlowSensor" .
+# 
+# https://www.w3id.org/aservo#NO2Level
+<https://www.w3id.org/aservo#NO2Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#NO2Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#AirQuality> .
+<https://www.w3id.org/aservo#NO2Level> <http://www.w3.org/2000/01/rdf-schema#comment> "Nitrogen dioxide level in the air"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#NO2Level> <http://www.w3.org/2000/01/rdf-schema#label> "NO2Level" .
+# 
+# https://www.w3id.org/aservo#O3Level
+<https://www.w3id.org/aservo#O3Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#O3Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#AirQuality> .
+<https://www.w3id.org/aservo#O3Level> <http://www.w3.org/2000/01/rdf-schema#comment> "Ozone level in the air"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#O3Level> <http://www.w3.org/2000/01/rdf-schema#label> "O3Level" .
+# 
+# https://www.w3id.org/aservo#PeleanPlinian
+<https://www.w3id.org/aservo#PeleanPlinian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#PeleanPlinian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#PeleanPlinian> <http://www.w3.org/2000/01/rdf-schema#comment> "Pelean Plinian  type of volcanic eruption" .
+<https://www.w3id.org/aservo#PeleanPlinian> <http://www.w3.org/2000/01/rdf-schema#label> "PeleanPlinian" .
+# 
+# https://www.w3id.org/aservo#PhisycalProperty
+<https://www.w3id.org/aservo#PhisycalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#PhisycalProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Property> .
+<https://www.w3id.org/aservo#PhisycalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical properties"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#PhisycalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "PhisycalProperty" .
+# 
+# https://www.w3id.org/aservo#Plinian
+<https://www.w3id.org/aservo#Plinian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#Plinian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#Plinian> <http://www.w3.org/2000/01/rdf-schema#comment> "Plinian type of volcanic eruption" .
+<https://www.w3id.org/aservo#Plinian> <http://www.w3.org/2000/01/rdf-schema#label> "Plinian" .
+# 
+# https://www.w3id.org/aservo#PlinianaUltraplinian
+<https://www.w3id.org/aservo#PlinianaUltraplinian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#PlinianaUltraplinian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#PlinianaUltraplinian> <http://www.w3.org/2000/01/rdf-schema#comment> "Plinian Ultraplinian  type of volcanic eruption" .
+<https://www.w3id.org/aservo#PlinianaUltraplinian> <http://www.w3.org/2000/01/rdf-schema#label> "PlinianaUltraplinian" .
+# 
+# https://www.w3id.org/aservo#PopulationRisks
+<https://www.w3id.org/aservo#PopulationRisks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#PopulationRisks> <http://www.w3.org/2000/01/rdf-schema#comment> "The risks that may affect to the people population or its material assets"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#PopulationRisks> <http://www.w3.org/2000/01/rdf-schema#label> "PopulationRisks" .
+# 
+# https://www.w3id.org/aservo#SO2Level
+<https://www.w3id.org/aservo#SO2Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#SO2Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#AirQuality> .
+<https://www.w3id.org/aservo#SO2Level> <http://www.w3.org/2000/01/rdf-schema#comment> "Sulfur dioxide level in the air"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#SO2Level> <http://www.w3.org/2000/01/rdf-schema#label> "SO2Level" .
+# 
+# https://www.w3id.org/aservo#SeismicActivity
+<https://www.w3id.org/aservo#SeismicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#SeismicActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#PhisycalProperty> .
+<https://www.w3id.org/aservo#SeismicActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Seismic activity properties"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#SeismicActivity> <http://www.w3.org/2000/01/rdf-schema#label> "SeismicActivity" .
+# 
+# https://www.w3id.org/aservo#SeismicActivitySensor
+<https://www.w3id.org/aservo#SeismicActivitySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#SeismicActivitySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Device> .
+<https://www.w3id.org/aservo#SeismicActivitySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device to measure the parameters of a seismic"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo#SeismicActivitySensor> <http://www.w3.org/2000/01/rdf-schema#label> "SeismicActivitySensor" .
+# 
+# https://www.w3id.org/aservo#StrombolianVulcanian
+<https://www.w3id.org/aservo#StrombolianVulcanian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#StrombolianVulcanian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#StrombolianVulcanian> <http://www.w3.org/2000/01/rdf-schema#comment> "Strombolian Vulcanian  type of volcanic eruption" .
+<https://www.w3id.org/aservo#StrombolianVulcanian> <http://www.w3.org/2000/01/rdf-schema#label> "StrombolianVulcanian" .
+# 
+# https://www.w3id.org/aservo#VolcanicEruption
+<https://www.w3id.org/aservo#VolcanicEruption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#VolcanicEruption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://www.w3id.org/aservo#VolcanicEruption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://saref.etsi.org/core/hasProperty> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://saref.etsi.org/core/Property> .
+<https://www.w3id.org/aservo#VolcanicEruption> <http://www.w3.org/2000/01/rdf-schema#comment> "A volcanic eruption" .
+<https://www.w3id.org/aservo#VolcanicEruption> <http://www.w3.org/2000/01/rdf-schema#label> "VolcanicEruption" .
+# 
+# https://www.w3id.org/aservo#Vulcanian
+<https://www.w3id.org/aservo#Vulcanian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#Vulcanian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#Vulcanian> <http://www.w3.org/2000/01/rdf-schema#comment> "Vulcanian  type of volcanic eruption" .
+<https://www.w3id.org/aservo#Vulcanian> <http://www.w3.org/2000/01/rdf-schema#label> "Vulcanian" .
+# 
+# https://www.w3id.org/aservo#VulcanianExplosivePelean
+<https://www.w3id.org/aservo#VulcanianExplosivePelean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo#VulcanianExplosivePelean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#VulcanianExplosivePelean> <http://www.w3.org/2000/01/rdf-schema#comment> "Vulcanian Explosive Pelean type of volcanic eruption" .
+<https://www.w3id.org/aservo#VulcanianExplosivePelean> <http://www.w3.org/2000/01/rdf-schema#label> "VulcanianExplosivePelean" .
+# 
+# https://www.w3id.org/aservo:aservo#AirQualityProperties
+<https://www.w3id.org/aservo:aservo#AirQualityProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/aservo:aservo#AirQualityProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Property> .
+<https://www.w3id.org/aservo:aservo#AirQualityProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Air quality properties"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://www.w3id.org/aservo:aservo#AirQualityProperties> <http://www.w3.org/2000/01/rdf-schema#label> "AirQualityProperties" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://www.w3id.org/aservo#affectedpeople1
+<https://www.w3id.org/aservo#affectedpeople1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#affectedpeople1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#AffectedPeople> .
+<https://www.w3id.org/aservo#affectedpeople1> <https://www.w3id.org/aservo#causedBy> <https://www.w3id.org/aservo#volcanlapalma1> .
+<https://www.w3id.org/aservo#affectedpeople1> <https://www.w3id.org/aservo#hasNumberOfMen> "826"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#affectedpeople1> <https://www.w3id.org/aservo#hasNumberOfWomen> "844"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://www.w3id.org/aservo#affectedpeople2
+<https://www.w3id.org/aservo#affectedpeople2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#affectedpeople2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#AffectedPeople> .
+<https://www.w3id.org/aservo#affectedpeople2> <https://www.w3id.org/aservo#hasNumberOfMen> "198"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#affectedpeople2> <https://www.w3id.org/aservo#hasNumberOfWomen> "193"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://www.w3id.org/aservo#affectedpeople3
+<https://www.w3id.org/aservo#affectedpeople3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#affectedpeople3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#AffectedPeople> .
+<https://www.w3id.org/aservo#affectedpeople3> <https://www.w3id.org/aservo#hasNumberOfMen> "80"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#affectedpeople3> <https://www.w3id.org/aservo#hasNumberOfWomen> "76"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://www.w3id.org/aservo#airqualitysensor001
+<https://www.w3id.org/aservo#airqualitysensor001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#airqualitysensor001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#AirQualitySensor> .
+<https://www.w3id.org/aservo#airqualitysensor001> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#no2level1> .
+<https://www.w3id.org/aservo#airqualitysensor001> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#o3level1> .
+<https://www.w3id.org/aservo#airqualitysensor001> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#so2level1> .
+# 
+# https://www.w3id.org/aservo#lavaflow1
+<https://www.w3id.org/aservo#lavaflow1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#lavaflow1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#LavaFlow> .
+<https://www.w3id.org/aservo#lavaflow1> <https://saref.etsi.org/core/relatesToMeasurement> <https://www.w3id.org/aservo#lavaflowmeasurement1> .
+# 
+# https://www.w3id.org/aservo#lavaflowmeasurement1
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <https://saref.etsi.org/core/hasMeasurement> <https://www.w3id.org/aservo#lavaflow1> .
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <https://www.w3id.org/aservo#hasArea> "11360258.6178296"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <https://www.w3id.org/aservo#hasHectares> "1136.02586178296"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <https://www.w3id.org/aservo#hasPerimeter> "55080.9270797893"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <https://www.w3id.org/aservo#hasShapeArea> "14796038.3266602"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#lavaflowmeasurement1> <https://www.w3id.org/aservo#hasShapeLength> "62828.82241109"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://www.w3id.org/aservo#lavaflowsensor1
+<https://www.w3id.org/aservo#lavaflowsensor1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#lavaflowsensor1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#LavaFlowSensor> .
+<https://www.w3id.org/aservo#lavaflowsensor1> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#lavaflow1> .
+# 
+# https://www.w3id.org/aservo#no2level1
+<https://www.w3id.org/aservo#no2level1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#no2level1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#NO2Level> .
+<https://www.w3id.org/aservo#no2level1> <https://saref.etsi.org/core/relatesToMeasurement> <https://www.w3id.org/aservo#no2level1measurement> .
+# 
+# https://www.w3id.org/aservo#no2level1measurement
+<https://www.w3id.org/aservo#no2level1measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#no2level1measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://www.w3id.org/aservo#no2level1measurement> <https://saref.etsi.org/core/hasMeasurement> <https://www.w3id.org/aservo#no2level1> .
+<https://www.w3id.org/aservo#no2level1measurement> <https://www.w3id.org/aservo#hasHourAverage> "38.56"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#no2level1measurement> <https://www.w3id.org/aservo#hasTime> "2021-12-02T00:00:00+01:00" .
+# 
+# https://www.w3id.org/aservo#no2level2
+<https://www.w3id.org/aservo#no2level2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#no2level2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#NO2Level> .
+<https://www.w3id.org/aservo#no2level2> <https://saref.etsi.org/core/relatesToMeasurement> <https://www.w3id.org/aservo#no2levelmeasurement2> .
+# 
+# https://www.w3id.org/aservo#no2levelmeasurement2
+<https://www.w3id.org/aservo#no2levelmeasurement2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#no2levelmeasurement2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://www.w3id.org/aservo#no2levelmeasurement2> <https://saref.etsi.org/core/hasMeasurement> <https://www.w3id.org/aservo#no2level2> .
+<https://www.w3id.org/aservo#no2levelmeasurement2> <https://www.w3id.org/aservo#hasHourAverage> "40.67"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#no2levelmeasurement2> <https://www.w3id.org/aservo#hasTime> "2021-12-02T01:00:00+01:00" .
+# 
+# https://www.w3id.org/aservo#o3level1
+<https://www.w3id.org/aservo#o3level1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#o3level1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#O3Level> .
+<https://www.w3id.org/aservo#o3level1> <https://saref.etsi.org/core/relatesToMeasurement> <https://www.w3id.org/aservo#o3levelmeasurement1> .
+# 
+# https://www.w3id.org/aservo#o3levelmeasurement1
+<https://www.w3id.org/aservo#o3levelmeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#o3levelmeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://www.w3id.org/aservo#o3levelmeasurement1> <https://saref.etsi.org/core/hasMeasurement> <https://www.w3id.org/aservo#o3level1> .
+<https://www.w3id.org/aservo#o3levelmeasurement1> <https://www.w3id.org/aservo#hasHourAverage> "26.85"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#o3levelmeasurement1> <https://www.w3id.org/aservo#hasTime> "2021-12-02T12:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://www.w3id.org/aservo#seismicactivity1
+<https://www.w3id.org/aservo#seismicactivity1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#seismicactivity1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#SeismicActivity> .
+<https://www.w3id.org/aservo#seismicactivity1> <https://saref.etsi.org/core/relatesToMeasurement> <https://www.w3id.org/aservo#seismicactivitymeasurement1> .
+# 
+# https://www.w3id.org/aservo#seismicactivity2
+<https://www.w3id.org/aservo#seismicactivity2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#seismicactivity2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#SeismicActivity> .
+<https://www.w3id.org/aservo#seismicactivity2> <https://saref.etsi.org/core/relatesToMeasurement> <https://www.w3id.org/aservo#seismicactivitymeasurement2> .
+# 
+# https://www.w3id.org/aservo#seismicactivitymeasurement1
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <https://saref.etsi.org/core/hasMeasurement> <https://www.w3id.org/aservo#seismicactivity1> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "28.570"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <http://www.w3.org/2003/01/geo/wgs84_pos#lon> "-17.868"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <https://www.w3id.org/aservo#hasDate> "2021-09-18T00:24:46+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <https://www.w3id.org/aservo#hasDepth> "6.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <https://www.w3id.org/aservo#hasIntensity> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement1> <urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> "mbLg" .
+# 
+# https://www.w3id.org/aservo#seismicactivitymeasurement2
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/Measurement> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <https://saref.etsi.org/core/hasMeasurement> <https://www.w3id.org/aservo#seismicactivity2> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "28.570"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <http://www.w3.org/2003/01/geo/wgs84_pos#lon> "-17.868"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <https://www.w3id.org/aservo#hasDate> "2021-09-18T01:06:06+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <https://www.w3id.org/aservo#hasDepth> "6.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <https://www.w3id.org/aservo#hasIntensity> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#seismicactivitymeasurement2> <urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType> "mbLg" .
+# 
+# https://www.w3id.org/aservo#seismicactivitysensor2
+<https://www.w3id.org/aservo#seismicactivitysensor2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#seismicactivitysensor2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#SeismicActivitySensor> .
+<https://www.w3id.org/aservo#seismicactivitysensor2> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#seismicactivity1> .
+<https://www.w3id.org/aservo#seismicactivitysensor2> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#seismicactivity2> .
+# 
+# https://www.w3id.org/aservo#so2level1
+<https://www.w3id.org/aservo#so2level1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#so2level1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#SO2Level> .
+<https://www.w3id.org/aservo#so2level1> <https://www.w3id.org/aservo#hasHourAverage> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#so2level1> <https://www.w3id.org/aservo#hasTime> "2021-12-02T12:00:00+01:00" .
+# 
+# https://www.w3id.org/aservo#so2levelmeasurement1
+<https://www.w3id.org/aservo#so2levelmeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#so2levelmeasurement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/Measurement> .
+# 
+# https://www.w3id.org/aservo#spatialthing1
+<https://www.w3id.org/aservo#spatialthing1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#spatialthing1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/saref4envi/SpatialThing> .
+<https://www.w3id.org/aservo#spatialthing1> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#spatialthing1> <http://www.w3.org/2003/01/geo/wgs84_pos#lon> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://www.w3id.org/aservo#volcanlapalma1
+<https://www.w3id.org/aservo#volcanlapalma1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/aservo#volcanlapalma1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/aservo#VolcanicEruption> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#lavaflow1> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#no2level1> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#o3level1> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#seismicactivity1> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#seismicactivity2> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://saref.etsi.org/core/hasProperty> <https://www.w3id.org/aservo#so2level1> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://www.w3id.org/aservo:aservo#provokes> <https://www.w3id.org/aservo#affectedpeople1> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://www.w3id.org/aservo:aservo#provokes> <https://www.w3id.org/aservo#affectedpeople2> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://www.w3id.org/aservo:aservo#provokes> <https://www.w3id.org/aservo#affectedpeople3> .
+<https://www.w3id.org/aservo#volcanlapalma1> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "28.612778"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#volcanlapalma1> <http://www.w3.org/2003/01/geo/wgs84_pos#lon> "-17.866111"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://www.w3id.org/aservo#hasDurationInDays> "85"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://www.w3id.org/aservo#hasName> "Cumbre Vieja" .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://www.w3id.org/aservo#hasStartDate> "2021-09-19T14:10:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.w3id.org/aservo#volcanlapalma1> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid2 <http://www.w3.org/2002/07/owl#members> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#Hawaiian> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#HawaiianStrombolian> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#PeleanPlinian> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#Plinian> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#PlinianaUltraplinian> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#StrombolianVulcanian> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#Vulcanian> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/aservo#VulcanianExplosivePelean> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#v> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid11 <http://www.w3.org/2003/11/swrl#body> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid19 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VolcanicEruption> .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid17 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid13 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+<http://www.w3.org/2003/11/swrlb#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid13 <http://www.w3.org/2003/11/swrl#arguments> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#e> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/2003/11/swrl#head> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid21 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#Hawaiian> .
+_:genid21 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid22 <http://www.w3.org/2003/11/swrl#body> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid30 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VolcanicEruption> .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid28 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> .
+_:genid28 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid28 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid24 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+_:genid24 <http://www.w3.org/2003/11/swrl#arguments> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#e> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/2003/11/swrl#head> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid32 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#HawaiianStrombolian> .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid33 <http://www.w3.org/2003/11/swrl#body> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid41 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VolcanicEruption> .
+_:genid41 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid39 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> .
+_:genid39 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid39 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid35 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+_:genid35 <http://www.w3.org/2003/11/swrl#arguments> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#e> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/2003/11/swrl#head> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid43 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#StrombolianVulcanian> .
+_:genid43 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid44 <http://www.w3.org/2003/11/swrl#body> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid52 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VolcanicEruption> .
+_:genid52 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid50 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> .
+_:genid50 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid50 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid46 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+_:genid46 <http://www.w3.org/2003/11/swrl#arguments> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#e> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid44 <http://www.w3.org/2003/11/swrl#head> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid54 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VulcanianExplosivePelean> .
+_:genid54 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid55 <http://www.w3.org/2003/11/swrl#body> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid63 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VolcanicEruption> .
+_:genid63 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid61 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid57 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+_:genid57 <http://www.w3.org/2003/11/swrl#arguments> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#e> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/2003/11/swrl#head> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid65 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#PeleanPlinian> .
+_:genid65 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid66 <http://www.w3.org/2003/11/swrl#body> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid74 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VolcanicEruption> .
+_:genid74 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid72 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> .
+_:genid72 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid72 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid68 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+_:genid68 <http://www.w3.org/2003/11/swrl#arguments> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#e> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid66 <http://www.w3.org/2003/11/swrl#head> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid76 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#Plinian> .
+_:genid76 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid77 <http://www.w3.org/2003/11/swrl#body> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid85 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#VolcanicEruption> .
+_:genid85 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid83 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://www.w3id.org/aservo#hasVolcanicExplosivityIndex> .
+_:genid83 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid83 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid79 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid79 <http://www.w3.org/2003/11/swrl#arguments> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#e> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid77 <http://www.w3.org/2003/11/swrl#head> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid87 <http://www.w3.org/2003/11/swrl#classPredicate> <https://www.w3id.org/aservo#PlinianaUltraplinian> .
+_:genid87 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#v> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

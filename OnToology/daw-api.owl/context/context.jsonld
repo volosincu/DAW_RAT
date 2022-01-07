@@ -1,0 +1,265 @@
+{
+  "@context" : {
+    "VulcanianExplosivePelean" : {
+      "@id" : "https://www.w3id.org/aservo#VulcanianExplosivePelean"
+    },
+    "PeleanPlinian" : {
+      "@id" : "https://www.w3id.org/aservo#PeleanPlinian"
+    },
+    "hasVolcanicExplosivityIndex" : {
+      "@id" : "https://www.w3id.org/aservo#hasVolcanicExplosivityIndex",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "causedBy" : {
+      "@id" : "https://www.w3id.org/aservo#causedBy",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "O3Level" : {
+      "@id" : "https://www.w3id.org/aservo#O3Level"
+    },
+    "AirQualityProperties" : {
+      "@id" : "https://www.w3id.org/aservo:aservo#AirQualityProperties"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hasName" : {
+      "@id" : "https://www.w3id.org/aservo#hasName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+    },
+    "makeMeasurement" : {
+      "@id" : "https://saref.etsi.org/core/makeMeasurement",
+      "@type" : "@id"
+    },
+    "Vulcanian" : {
+      "@id" : "https://www.w3id.org/aservo#Vulcanian"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "PlinianaUltraplinian" : {
+      "@id" : "https://www.w3id.org/aservo#PlinianaUltraplinian"
+    },
+    "PopulationRisks" : {
+      "@id" : "https://www.w3id.org/aservo#PopulationRisks"
+    },
+    "Measurement" : {
+      "@id" : "https://saref.etsi.org/saref4envi/Measurement"
+    },
+    "Location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Location",
+      "@type" : "@id"
+    },
+    "NO2Level" : {
+      "@id" : "https://www.w3id.org/aservo#NO2Level"
+    },
+    "hasLatitude" : {
+      "@id" : "https://www.w3id.org/aservo:aservo#hasLatitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasDepth" : {
+      "@id" : "https://www.w3id.org/aservo#hasDepth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "AffectedBuildings" : {
+      "@id" : "https://www.w3id.org/aservo#AffectedBuildings"
+    },
+    "hasProperty" : {
+      "@id" : "https://saref.etsi.org/core/hasProperty",
+      "@type" : "@id"
+    },
+    "SeismicActivitySensor" : {
+      "@id" : "https://www.w3id.org/aservo#SeismicActivitySensor"
+    },
+    "hasPerimeter" : {
+      "@id" : "https://www.w3id.org/aservo#hasPerimeter",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasUse" : {
+      "@id" : "urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#hasUse",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "measurementMadeBy" : {
+      "@id" : "https://saref.etsi.org/core/measurementMadeBy",
+      "@type" : "@id"
+    },
+    "Date" : {
+      "@id" : "http://www.w3.org/2001/XMLSchema#Date"
+    },
+    "hasDate" : {
+      "@id" : "https://www.w3id.org/aservo#hasDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasArea" : {
+      "@id" : "https://www.w3id.org/aservo#hasArea",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SO2Level" : {
+      "@id" : "https://www.w3id.org/aservo#SO2Level"
+    },
+    "hasShapeLength" : {
+      "@id" : "https://www.w3id.org/aservo#hasShapeLength",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "LavaFlow" : {
+      "@id" : "https://www.w3id.org/aservo#LavaFlow"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "hasTime" : {
+      "@id" : "https://www.w3id.org/aservo#hasTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasHourAverage" : {
+      "@id" : "https://www.w3id.org/aservo#hasHourAverage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Hawaiian" : {
+      "@id" : "https://www.w3id.org/aservo#Hawaiian"
+    },
+    "hasMagnitude" : {
+      "@id" : "https://www.w3id.org/aservo#hasMagnitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "lon" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lon",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "isMeasurementOf" : {
+      "@id" : "https://saref.etsi.org/core/isMeasurementOf",
+      "@type" : "@id"
+    },
+    "relatesToMeasurement" : {
+      "@id" : "https://saref.etsi.org/core/relatesToMeasurement",
+      "@type" : "@id"
+    },
+    "AirQuality" : {
+      "@id" : "https://www.w3id.org/aservo#AirQuality"
+    },
+    "hasLongitude" : {
+      "@id" : "https://www.w3id.org/aservo#hasLongitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SeismicActivity" : {
+      "@id" : "https://www.w3id.org/aservo#SeismicActivity"
+    },
+    "VolcanicEruption" : {
+      "@id" : "https://www.w3id.org/aservo#VolcanicEruption"
+    },
+    "Property" : {
+      "@id" : "https://saref.etsi.org/core/Property"
+    },
+    "AffectedPeople" : {
+      "@id" : "https://www.w3id.org/aservo#AffectedPeople"
+    },
+    "hasCity" : {
+      "@id" : "https://www.w3id.org/aservo#hasCity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SpatialObject" : {
+      "@id" : "https://saref.etsi.org/saref4envi/SpatialObject"
+    },
+    "StrombolianVulcanian" : {
+      "@id" : "https://www.w3id.org/aservo#StrombolianVulcanian"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "LavaFlowSensor" : {
+      "@id" : "https://www.w3id.org/aservo#LavaFlowSensor"
+    },
+    "hasShapeArea" : {
+      "@id" : "https://www.w3id.org/aservo#hasShapeArea",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasCount" : {
+      "@id" : "https://www.w3id.org/aservo#hasCount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasNumberOfMen" : {
+      "@id" : "https://www.w3id.org/aservo#hasNumberOfMen",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "isPropertyOf" : {
+      "@id" : "https://saref.etsi.org/core/isPropertyOf",
+      "@type" : "@id"
+    },
+    "HawaiianStrombolian" : {
+      "@id" : "https://www.w3id.org/aservo#HawaiianStrombolian"
+    },
+    "relatesToProperty" : {
+      "@id" : "https://saref.etsi.org/core/relatesToProperty",
+      "@type" : "@id"
+    },
+    "hasIntensity" : {
+      "@id" : "https://www.w3id.org/aservo#hasIntensity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasSeismDate" : {
+      "@id" : "https://www.w3id.org/aservo#hasSeismDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SpatialThing" : {
+      "@id" : "https://saref.etsi.org/saref4envi/SpatialThing"
+    },
+    "hasDurationInDays" : {
+      "@id" : "https://www.w3id.org/aservo#hasDurationInDays",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasMeasurement" : {
+      "@id" : "https://saref.etsi.org/core/hasMeasurement",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "isMagnitudeType" : {
+      "@id" : "urn:webprotege:ontology:6d655d97-618e-4cd2-840b-832a836ae541#isMagnitudeType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "hasNumberOfWomen" : {
+      "@id" : "https://www.w3id.org/aservo#hasNumberOfWomen",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "AirQualitySensor" : {
+      "@id" : "https://www.w3id.org/aservo#AirQualitySensor"
+    },
+    "Device" : {
+      "@id" : "https://saref.etsi.org/core/Device"
+    },
+    "Plinian" : {
+      "@id" : "https://www.w3id.org/aservo#Plinian"
+    },
+    "hasLocation" : {
+      "@id" : "https://www.w3id.org/aservo#hasLocation",
+      "@type" : "@id"
+    },
+    "provokes" : {
+      "@id" : "https://www.w3id.org/aservo:aservo#provokes",
+      "@type" : "@id"
+    },
+    "hasHectares" : {
+      "@id" : "https://www.w3id.org/aservo#hasHectares",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "PhisycalProperty" : {
+      "@id" : "https://www.w3id.org/aservo#PhisycalProperty"
+    },
+    "hasStartDate" : {
+      "@id" : "https://www.w3id.org/aservo#hasStartDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  }
+}
