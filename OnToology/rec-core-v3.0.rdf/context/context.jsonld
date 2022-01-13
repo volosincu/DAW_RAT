@@ -1,0 +1,309 @@
+{
+  "@context" : {
+    "hasCreatedTime" : {
+      "@id" : "https://w3id.org/rec/core/hasCreatedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "servesDevice" : {
+      "@id" : "https://w3id.org/rec/core/servesDevice",
+      "@type" : "@id"
+    },
+    "hasPopularName" : {
+      "@id" : "https://w3id.org/rec/core/hasPopularName"
+    },
+    "associatedWithEvent" : {
+      "@id" : "https://w3id.org/rec/core/associatedWithEvent",
+      "@type" : "@id"
+    },
+    "hasVistingAddress" : {
+      "@id" : "https://w3id.org/rec/core/hasVistingAddress"
+    },
+    "deviceMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/deviceMeasurementUnit",
+      "@type" : "@id"
+    },
+    "RealEstateComponent" : {
+      "@id" : "https://w3id.org/rec/core/RealEstateComponent"
+    },
+    "unitSign" : {
+      "@id" : "https://w3id.org/rec/core/unitSign"
+    },
+    "isMountedInBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/isMountedInBuildingComponent",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "hasObservationTime" : {
+      "@id" : "https://w3id.org/rec/core/hasObservationTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "Room" : {
+      "@id" : "https://w3id.org/rec/core/Room"
+    },
+    "hasRealEstateComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasRealEstateComponent",
+      "@type" : "@id"
+    },
+    "asWKT" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral"
+    },
+    "qkMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/qkMeasurementUnit",
+      "@type" : "@id"
+    },
+    "hasSubDevice" : {
+      "@id" : "https://w3id.org/rec/core/hasSubDevice",
+      "@type" : "@id"
+    },
+    "entityPositionX" : {
+      "@id" : "http://ontologydesignpatterns.org/opla-sd#entityPositionX"
+    },
+    "hasDeletedTime" : {
+      "@id" : "https://w3id.org/rec/core/hasDeletedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "servesBuilding" : {
+      "@id" : "https://w3id.org/rec/core/servesBuilding",
+      "@type" : "@id"
+    },
+    "Geometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
+    "hasValue" : {
+      "@id" : "https://w3id.org/rec/core/hasValue"
+    },
+    "hasComment" : {
+      "@id" : "https://w3id.org/rec/core/hasComment"
+    },
+    "hasGeoReferenceOrigo" : {
+      "@id" : "https://w3id.org/rec/core/hasGeoReferenceOrigo",
+      "@type" : "@id"
+    },
+    "hasMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/hasMeasurementUnit",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isPartOf" : {
+      "@id" : "https://w3id.org/rec/core/isPartOf",
+      "@type" : "@id"
+    },
+    "hasPostalAddress" : {
+      "@id" : "https://w3id.org/rec/core/hasPostalAddress"
+    },
+    "hasPart" : {
+      "@id" : "https://w3id.org/rec/core/hasPart",
+      "@type" : "@id"
+    },
+    "hasStartTime" : {
+      "@id" : "https://w3id.org/rec/core/hasStartTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "BuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/BuildingComponent"
+    },
+    "hasReadTime" : {
+      "@id" : "https://w3id.org/rec/core/hasReadTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasUpdatedTime" : {
+      "@id" : "https://w3id.org/rec/core/hasUpdatedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Event" : {
+      "@id" : "https://w3id.org/rec/core/Event"
+    },
+    "hasLocationAttribute" : {
+      "@id" : "https://w3id.org/rec/core/hasLocationAttribute"
+    },
+    "hasSustainabilityCertification" : {
+      "@id" : "https://w3id.org/rec/core/hasSustainabilityCertification"
+    },
+    "hasDuration" : {
+      "@id" : "https://w3id.org/rec/core/hasDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "hasGeoReferenceBearing" : {
+      "@id" : "https://w3id.org/rec/core/hasGeoReferenceBearing",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "hasPointInTime" : {
+      "@id" : "https://w3id.org/rec/core/hasPointInTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "RealEstate" : {
+      "@id" : "https://w3id.org/rec/core/RealEstate"
+    },
+    "hasSuperDevice" : {
+      "@id" : "https://w3id.org/rec/core/hasSuperDevice",
+      "@type" : "@id"
+    },
+    "Agent" : {
+      "@id" : "https://w3id.org/rec/core/Agent"
+    },
+    "eventMeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/eventMeasurementUnit",
+      "@type" : "@id"
+    },
+    "isLocatedAtLocalCoordinates" : {
+      "@id" : "https://w3id.org/rec/core/isLocatedAtLocalCoordinates"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "hasSource" : {
+      "@id" : "https://w3id.org/rec/core/hasSource"
+    },
+    "Land" : {
+      "@id" : "https://w3id.org/rec/core/Land"
+    },
+    "hasSerialization" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/rec/core/Building"
+    },
+    "hasTime" : {
+      "@id" : "https://w3id.org/rec/core/hasTime"
+    },
+    "MeasurementUnit" : {
+      "@id" : "https://w3id.org/rec/core/MeasurementUnit"
+    },
+    "asGML" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#asGML",
+      "@type" : "http://www.opengis.net/ont/geosparql#gmlLiteral"
+    },
+    "hasStopTime" : {
+      "@id" : "https://w3id.org/rec/core/hasStopTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "QuantityKind" : {
+      "@id" : "https://w3id.org/rec/core/QuantityKind"
+    },
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated"
+    },
+    "hasAuxiliaryData" : {
+      "@id" : "https://w3id.org/rec/core/hasAuxiliaryData"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "hasBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasBuildingComponent",
+      "@type" : "@id"
+    },
+    "quantityKind" : {
+      "@id" : "https://w3id.org/rec/core/quantityKind",
+      "@type" : "@id"
+    },
+    "hasLittera" : {
+      "@id" : "https://w3id.org/rec/core/hasLittera"
+    },
+    "hasGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasZipCode" : {
+      "@id" : "https://w3id.org/rec/core/hasZipCode"
+    },
+    "serves" : {
+      "@id" : "https://w3id.org/rec/core/serves",
+      "@type" : "@id"
+    },
+    "hasCity" : {
+      "@id" : "https://w3id.org/rec/core/hasCity"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "coversRequirements" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"
+    },
+    "isPartOfRealEstate" : {
+      "@id" : "https://w3id.org/rec/core/isPartOfRealEstate",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "GeoReferenceOrigo" : {
+      "@id" : "https://w3id.org/rec/core/GeoReferenceOrigo"
+    },
+    "hasAliasID" : {
+      "@id" : "https://w3id.org/rec/core/hasAliasID"
+    },
+    "entityPosition" : {
+      "@id" : "http://ontologydesignpatterns.org/opla-sd#entityPosition"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isPartOfBuilding" : {
+      "@id" : "https://w3id.org/rec/core/isPartOfBuilding",
+      "@type" : "@id"
+    },
+    "hasGeonamesId" : {
+      "@id" : "https://w3id.org/rec/core/hasGeonamesId"
+    },
+    "containsMountedDevice" : {
+      "@id" : "https://w3id.org/rec/core/containsMountedDevice",
+      "@type" : "@id"
+    },
+    "hasRegion" : {
+      "@id" : "https://w3id.org/rec/core/hasRegion"
+    },
+    "Device" : {
+      "@id" : "https://w3id.org/rec/core/Device"
+    },
+    "hasSubBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasSubBuildingComponent",
+      "@type" : "@id"
+    },
+    "servesBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/servesBuildingComponent",
+      "@type" : "@id"
+    },
+    "defaultGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#defaultGeometry",
+      "@type" : "@id"
+    },
+    "hasCountry" : {
+      "@id" : "https://w3id.org/rec/core/hasCountry"
+    },
+    "entityPositionY" : {
+      "@id" : "http://ontologydesignpatterns.org/opla-sd#entityPositionY"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "hasSuperBuildingComponent" : {
+      "@id" : "https://w3id.org/rec/core/hasSuperBuildingComponent",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}
