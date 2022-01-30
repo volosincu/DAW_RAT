@@ -31,7 +31,8 @@ Change dir:
 `cd dawrestinteractiv`
 
 Run with docker-compose:
-`docker-compose run --detach --service-ports daw-interactive`
+`docker-compose up -d`
+
 
 ### Build and run locally 
 
@@ -89,13 +90,9 @@ generate an application:
 install swagger hook to generate Openapi schema based on endpoints and models:
 `npm install sails-hook-swagger-generator --save`
 
-```
-sails generate model Movie id:string title:string ratings:number cast:json isReleased:boolean isPlaying:boolean isSeries:boolean releasedTimestamp:string
-
-sails generate model Actor id:string name:string surname:string birthday:string movies:json plays:json foto:string prizes:json
-
-sails generate model Review id:string stars:number comment:string movieId:string
-```
+Pentru tokenizare, extragerea parților de vorbire sau NER (name entity recognition) folosim 
+libraria spacy într-un container docker (configurat în docker-compose).
+https://hub.docker.com/r/neelkamath/spacy-server
 
 Run the application:
 
