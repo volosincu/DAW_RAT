@@ -1,0 +1,16 @@
+.searchPageHeader{
+    min-height: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient( rgb(44, 98, 119), rgb(255, 255, 255));
+
+}
+
+.logoSearch {
+    height: 20vmin;
+    pointer-events: none;
+  }
+.searchPageResults{
+
+}

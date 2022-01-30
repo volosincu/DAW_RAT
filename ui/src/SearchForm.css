@@ -1,0 +1,21 @@
+#searchButton{
+    position: absolute;
+    top: 60%;
+    left: 75%;
+    width: 5%;
+    height: 7%;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: #83adb5;
+}
+
+#searchBar{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    width: 43%;
+    height: 6.2%;
+    border-radius: 12px;
+    background-color: #bfe1e7;
+    font-size: 18px;
+}
