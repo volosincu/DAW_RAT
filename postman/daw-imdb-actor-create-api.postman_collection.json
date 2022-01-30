@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0378a4de-9570-46ba-a852-061943135a0c",
+		"_postman_id": "f2bbc838-4b5a-4824-afb9-67646db8b42c",
 		"name": "daw-imdb-actor-create-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -103,6 +103,96 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"name\": \"\",\r\n    \"surname\": \"\",\r\n    \"description\": \"\",\r\n    \"birthday\": \"\",\r\n    \"movies\": \"\",\r\n    \"plays\": \"\",\r\n    \"prizes\": \"\",\r\n    \"theatre\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor{tom-hanks}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Thomas Jeffrey\",\r\n    \"surname\": \"Hanks\",\r\n    \"description\": \"Thomas Jeffrey Hanks was born in Concord, California, to Janet Marylyn (Frager), a hospital worker, and Amos Mefford Hanks, an itinerant cook. His mother's family, originally surnamed \\\"Fraga\\\", was entirely Portuguese, while his father was of mostly English ancestry. Tom grew up in what he has called a \\\"fractured\\\" family. He moved around a great deal after his parents' divorce, living with a succession of step-families. No problems, no alcoholism - just a confused childhood. He has no acting experience in college and credits the fact that he could not get cast in a college play with actually starting his career. He went downtown, and auditioned for a community theater play, was invited by the director of that play to go to Cleveland, and there his acting career started.In Philadelphia, he played a gay lawyer with AIDS who sues his firm for discrimination. Hanks lost 35 pounds and thinned his hair in order to appear sickly for the role. In a review for People, Leah Rozen stated, \\\"Above all, credit for Philadelphia's success belongs to Hanks, who makes sure that he plays a character, not a saint. He is flat-out terrific, giving a deeply felt, carefully nuanced performance that deserves an Oscar.\\\" Hanks won the 1993 Academy Award for Best Actor for his role in Philadelphia. During his acceptance speech, he revealed that his high school drama teacher Rawley Farnsworth and former classmate John Gilkerson, two people with whom he was close, were gay.Hanks followed Philadelphia with the blockbuster Forrest Gump (1994) which grossed a worldwide total of over $600 million at the box office. Hanks remarked: \\\"When I read the script for Gump, I saw it as one of those kind of grand, hopeful movies that the audience can go to and feel ... some hope for their lot and their position in life ... I got that from the movies a hundred million times when I was a kid. I still do.\\\" Hanks won his second Best Actor Academy Award for his role in Forrest Gump, becoming only the second actor to have accomplished the feat of winning consecutive Best Actor Oscars. Hanks' next role - astronaut and commander Jim Lovell, in the docudrama Apollo 13 (1995) - reunited him with Ron Howard. Critics generally applauded the film and the performances of the entire cast, which included actors Kevin Bacon, Bill Paxton, Gary Sinise, Ed Harris, and Kathleen Quinlan. The movie also earned nine Academy Award nominations, winning two. Later that year, Hanks starred in Disney\\/Pixar's computer-animated film Povestea juc\\u0103riilor (1995), as the voice of Sheriff Woody. A year later, he made his directing debut with the musical comedy That Thing You Do! (1996) about the rise and fall of a 1960s pop group, also playing the role of a music producer.\",\r\n    \"birthday\": \"1956-07-09T22:00:00.000Z\",\r\n    \"movies\": \"Toy Story 3;Angels & Demons;The Da Vinci Code;Cast Away;The Green Mile;Toy Story 2;You've Got Mail;Saving Private Ryan;Toy Story;Forrest Gump;The Bonfire of the Vanities;Punchline;Big;The Circle;Maya & Marty;Capitanul Phillips\",\r\n    \"plays\": \"\",\r\n    \"prizes\": \"Best Actor in a Leading Role, Forrest Gump, 1994; Best Actor in a Leading Role, Philadelphia, 1993; Primetime Emmy, 2002\",\r\n    \"theatre\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor{angelina-jolie}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Angelina\",\r\n    \"surname\": \"Jolie\",\r\n    \"description\": \"Angelina Jolie is an Academy Award-winning actress who rose to fame after her role in Tinerete furata (1999), playing the title role in the \\\"Lara Croft\\\" blockbuster movies, as well as Domnul si doamna Smith (2005), Wanted (2008), Salt (2010) and Maleficent (2014). Off-screen, Jolie has become prominently involved in international charity projects, especially those involving refugees. She often appears on many \\\"most beautiful women\\\" lists, and she has a personal life that is avidly covered by the tabloid press.\\r\\nJolie was born Angelina Jolie Voight in Los Angeles, California. In her earliest years, Angelina began absorbing the acting craft from her actor parents, Jon Voight, an Oscar-winner, and Marcheline Bertrand, who had studied with Lee Strasberg. Her good looks may derive from her ancestry, which is German and Slovak on her father's side, and French-Canadian, Dutch, Polish, and remote Huron, on her mother's side. At age eleven, Angelina began studying at the Lee Strasberg Theatre Institute, where she was seen in several stage productions. She undertook some film studies at New York University and later joined the renowned Met Theatre Group in Los Angeles. At age 16, she took up a career in modeling and appeared in some music videos.\",\r\n    \"birthday\": \"1975-06-04T22:00:00.000Z\",\r\n    \"movies\": \"Eternals; Those Who Wish Me Dead; The One and Only Ivan; Kung Fu Panda 3; Kung Fu Panda 2; Beowulf; The Good Shepherd;Domnul si doamna Smith, Alexandru; Shark Tale; Identitati furate; Lara Croft Tomb Raider: Leagănul Vieţii; Lara Croft: Tomb Raider\",\r\n    \"plays\": \"\",\r\n    \"prizes\": \"Jean Hersholt Humanitarian Award, 2014; Oscar, Best Actress in a Supporting Role, 2000; Primetime Emmy, Outstanding Lead Actress in a Miniseries or a Movie, 1998; BAFTA Film Award, Best Film Not in the English Language, 2018\",\r\n    \"theatre\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor{denzel-washington}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Denzel\",\r\n    \"surname\": \"Washington\",\r\n    \"description\": \"Denzel Hayes Washington, Jr. was born on December 28, 1954 in Mount Vernon, New York. He is the middle of three children of a beautician mother, Lennis, from Georgia, and a Pentecostal minister father, Denzel Washington, Sr., from Virginia. After graduating from high school, Denzel enrolled at Fordham University, intent on a career in journalism. However, he caught the acting bug while appearing in student drama productions and, upon graduation, he moved to San Francisco and enrolled at the American Conservatory Theater. He left A.C.T. after only one year to seek work as an actor. His first paid acting role was in a summer stock theater stage production in St. Mary's City, Maryland. The play was \\\"Wings of the Morning\\\", which is about the founding of the colony of Maryland (now the state of Maryland) and the early days of the Maryland colonial assembly (a legislative body). He played the part of a real historical character, Mathias Da Sousa, although much of the dialogue was created. Afterwards he began to pursue screen roles in earnest. With his acting versatility and powerful presence, he had no difficulty finding work in numerous television productions.\\r\\n\\r\\nHe made his first big screen appearance in Copie la indigo (1981) with George Segal. Through the 1980s, he worked in both movies and television and was chosen for the plum role of Dr. Philip Chandler in NBC's hit medical series St. Elsewhere (1982), a role that he would play for six years. In 1989, his film career began to take precedence when he won the Oscar for Best Supporting Actor for his portrayal of Tripp, the runaway slave in Edward Zwick's powerful historical masterpiece Glorie (1989).\\r\\n\\r\\nWashington has received much critical acclaim for his film work since the 1990s, including his portrayals of real-life figures such as South African anti-apartheid activist Steve Biko in Cry Freedom (1987), Muslim minister and human rights activist Malcolm X in Malcolm X (1992), boxer Rubin \\\"Hurricane\\\" Carter in Carter, zis 'Uraganul' (1999), football coach Herman Boone in Titanii (2000), poet and educator Melvin B. Tolson in La \\u00EEnceput a fost cuv\\u00E2ntul (2007), and drug kingpin Frank Lucas in Gangster American (2007). Malcolm X and The Hurricane garnered him Oscar nominations for Best Actor, before he finally won that statuette in 2002 for his lead role in Zi de instructie (2001).\\r\\n\\r\\nThrough the 1990s, Denzel also co-starred in such big budget productions as Dosarul Pelican (1993), Philadelphia (1993), Valul ucigas (1995), Dragoste de \\u00EEnger (1996), and Curaj \\u00EEn linia \\u00EEnt\\u00E2i (1996), a role for which he was paid $10 million. He continued to define his onscreen persona as the tough, no-nonsense hero through the 2000s in films like Contratimp (2003), Om \\u00EEn fl\\u0103c\\u0103ri (2004), Omul din interior (2006), and S-a furat un tren 123 (2009). Cerebral and meticulous in his film work, he made his debut as a director with Antwone Fisher (2002); he also directed La \\u00EEnceput a fost cuv\\u00E2ntul (2007) and Garduri (2016).\",\r\n    \"birthday\": \"1954-12-28T22:00:00.000Z\",\r\n    \"movies\": \"Malcolm X; Dragoste de înger; Sa înceapa jocul; Stare de asediu; Colectionarul de oase; Titanii; John Q; Antwone Fisher; Contratimp; Gangster American; Cartea lui Eli; The Equalizer;\",\r\n    \"plays\": \"The Tragedy of Macbeth\",\r\n    \"prizes\": \"Oscar, Best Actor in a Leading Role, 2002; Oscar, Best Actor in a Leading Role,  2000; Oscar, Best Actor in a Supporting Role, 1990\",\r\n    \"theatre\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
