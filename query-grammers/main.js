@@ -1,30 +1,57 @@
-
-
-var express = require('express')
 const path = require('path')
 const cors = require('cors')
 const uuid = require('uuid')
-const reqParser = require("body-parser")
-const nlp = require("spacy-nlp");
-const serverPromise = spacyNLP.server({ port: 9007 });
+const axios = require('axios')
+const express = require('express')
+const reqParser = require('body-parser')
 
 var expressPooling = require("express-longpoll")
 const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
 
-var app = express();
+var app = express()
 app.use(cors())
 app.use(reqParser.json());
 
 let grammerQL = ()=>{console.log('generate query'); return 'generate query';}
 
 
-
+let posResult = {};
 
 app.get('/gramm-query',
     function (req, res) {
-        grammerQL()
+
+        axios
+            .post('http://localhost:18000/pos', {
+                "text": "My name is John Doe."
+            })
+            .then(res => {
+                console.log(`statusCode: ${res.status}`)
+                if (res.data && res.data.data && res.data.data){
+                    const posData = res.data.data[0];
+                    posResult['text'] = posData["text"];
+                    posResult['pos'] = posData.tags.reduce((acc, e)=>{
+                        acc = [...acc, e.pos];
+                        return acc;
+                    },[]);
+                    posResult['join'] = posData.tags.reduce((acc, e)=>{
+                        acc = [...acc, {part: e.text, pos: e.pos}];
+                        return acc;
+                    },[]);
+                }
+
+            })
+            .catch(error => {
+                console.error(error)
+            })
+
         res.send('test gramm-query');
     });
+
+app.get('/gramm-queryp',
+    function (req, res) {
+        res.send(JSON.stringify(posResult));
+    });
+
 
 app.post('/top-movies',
     function (req, res) {
