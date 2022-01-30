@@ -1,0 +1,27 @@
+version : '3'
+
+services:
+  daw-interactive:
+    image: usaturn/daw-open-api
+    container_name: daw-open-api
+    build:
+      context: .
+    environment:
+      - SHELL=/bin/bash
+    ports:
+      - 51337:1337
+#    volumes:
+#      - ./:/app
+  nlp-pos-tagging:
+    image: neelkamath/spacy-server:2-en_core_web_md
+    container_name: nlp-pos-tagging
+#    depends_on:
+#      - ssa-ia
+    environment:
+      - SPACY_MODEL=en_core_web_md
+    ports:
+      - 18000:8000
+#      - 10443:443
+
+
+    #command: [nginx-debug, '-g', 'daemon off;']
