@@ -5,6 +5,7 @@ import { actionTypes } from "./reducer";
 import {useHistory} from 'react-router-dom';
 import DawRestContext from './DawRestContext'
 import ReactJson from 'react-json-view'
+import {callNLP} from "./apicalls"
 
 const JsonStyle = {
     propertyStyle: { color: '#c9cd05' },
@@ -27,9 +28,9 @@ function Search(){
         setShowResults(false);
     }
 
-    const onClickShowResults = (e) =>{
-        dispatch({type: "results", payload: {results: {test: "some data"}}});
-
+    const onClickShowResults = async (e) =>{
+        const results = await callNLP();
+        dispatch({type: "results", payload: {results: results}});
         setShowResults(true);
     }
   
@@ -58,7 +59,7 @@ function Search(){
                     {showResults ? <ReactJson src={sample} theme="monokai" indentWidth={6} /> : null} 
                 </div>
                 <div className='view2'>
-                    {showResults ? <ReactJson src={sample} theme="monokai" indentWidth={6} /> : null} 
+                    {showResults ? <ReactJson src={state.results} theme="monokai" indentWidth={6} /> : null} 
                 </div>
             </div>
         </>
