@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-export async function callNLP () {
+export async function callNLP (term) {
+    console.log(term)
+    // return
 
     return new Promise((resolve, reject)=>{
         axios
-            .get('http://localhost:34567/parse')
+            .post('http://localhost:34567/parse', {"text":term})
             .then(res => {
                 console.log(`statusCode: ${res.status}`)
                 // debugger

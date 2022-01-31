@@ -29,7 +29,7 @@ function Search(){
     }
 
     const onClickShowResults = async (e) =>{
-        const results = await callNLP();
+        const results = await callNLP(state.term);
         dispatch({type: "results", payload: {results: results}});
         setShowResults(true);
     }
@@ -44,7 +44,7 @@ function Search(){
                     id = "searchBar" 
                     placeholder="Ce filme au mai apărut.... " 
                     name="Search" onChange={(e) => {
-                        dispatch({type: "search", payload: {term: "abc de"}})
+                        dispatch({type: "search", payload: {term: e.target.value}})
                         }} />
                 </div>
 
