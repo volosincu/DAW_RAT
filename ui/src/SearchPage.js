@@ -8,6 +8,8 @@ function SearchResut() {
     const [{term}, dispatch] = useStateValue();
     const { data } = useGoogleSearch(term);
 
+    
+
     console.log(data);
     return (
         <div className="searchPage">
@@ -17,8 +19,12 @@ function SearchResut() {
             <span style={{fontSize: 50, color:"#81d8d0"}}>a</span>
             <span style={{fontSize: 50, color:"#176a71"}}>w</span>
             <span style={{fontSize: 50, color:"#81d8d0"}}>R</span>
-            <span style={{fontSize: 50, color:"#356b76"}}>a</span>
-            <span style={{fontSize: 50, color:"#0095a4"}}>t</span>
+            <span style={{fontSize: 50, color:"#356b76"}}>e</span>
+            <span style={{fontSize: 50, color:"#0095a4"}}>s</span>
+            <span style={{fontSize: 50, color:"#81d8d0"}}>t</span>
+            <span style={{fontSize: 50, color:"#0095a4"}}>A</span>
+            <span style={{fontSize: 50, color:"#176a71"}}>p</span>
+            <span style={{fontSize: 50, color:"#15434a"}}>i</span>
         </div>
 
         <div className="searchPageResults"></div>
