@@ -7,7 +7,7 @@ module.exports = {
   friendlyName: 'Actor',
 
 
-  description: 'This action if for select Actor entries.',
+  description: 'This action is to create Actor entries.',
 
 
   inputs: {
@@ -60,6 +60,7 @@ module.exports = {
         description: 'theatre where actor plays ',
         extendedDescription: 'Modern theatre includes performances of plays and musical theatre. The art forms of ballet and opera are also theatre and use many conventions such as acting, costumes and staging.',
       },
+      
   },
 
 

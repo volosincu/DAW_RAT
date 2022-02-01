@@ -17,17 +17,20 @@ module.exports = {
 
     title: { type: 'string' },
 
+    year: {type: 'string'},
+
     ratings: { type: 'number' },
 
-    cast: { type: 'json' },
+    cast: { type: 'string' },
 
-    isReleased: { type: 'boolean' },
+    serie: { type: 'boolean' },
 
-    isPlaying: { type: 'boolean' },
+    platform: {type: 'string'},
 
-    isSeries: { type: 'boolean' },
+    description: {type : 'string'},
 
-    releasedTimestamp: { type: 'string' }
+    imdb: {type: 'string'}
+
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗

@@ -68,6 +68,12 @@ module.exports.routes = {
   'GET   /api/v1/actor/movies/:actorId':                 { action: 'actor/get-actor-movies' },
   'GET   /api/v1/actor/plays/:actorId':                  { action: 'actor/get-actor-plays' },
 
+  'POST  /api/v1/movie/':                                 { action: 'movie/post-movie' },
+  'GET   /api/v1/movie':                                  { action: 'movie/get-movies-by-title' },
+  'GET   /api/v1/movie/title/:title':                   { action: 'movie/get-movies-by-title' },
+  'GET  /api/v1/movie/cast/:cast':                     { action: 'movie/get-movies-by-cast' },
+  'GET  /api/v1/movie/platform/:platform':                { action: 'movie/get-movies-by-platform' },
+
   // 'POST  /api/v1/observe-my-session':                 { action: 'observe-my-session', hasSocketFeatures: true },
 
 };

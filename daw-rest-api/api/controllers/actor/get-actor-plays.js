@@ -48,7 +48,7 @@ module.exports = {
   
       let result = [];
       try{
-        const _actor = Actor.findOne({id:actorId});
+        const _actor =  await Actor.findOne({id:actorId});
         const plays = _actor.plays;
         sails.log("-----------------------------")
         sails.log(_actor)
