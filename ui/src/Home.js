@@ -10,7 +10,7 @@ import DawRestContext from './DawRestContext';
 function Home() {
     const { state, dispatch } = useContext(DawRestContext);
 
-    console.log('search form', state);
+    // console.log('search form', state);
 
     // function handleClick(e) {
     //     e.preventDefault();
