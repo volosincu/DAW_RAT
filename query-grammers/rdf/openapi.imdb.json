@@ -1,0 +1,955 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Swagger Json",
+    "description": "This is a generated swagger json for your sails project",
+    "termsOfService": "http://example.com/terms",
+    "contact": {
+      "name": "Theophilus Omoregbee",
+      "url": "http://github.com/theo4u",
+      "email": "theo4u@ymail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:51337/"
+    }
+  ],
+  "externalDocs": {
+    "url": "https://theoomoregbee.github.io/"
+  },
+  "tags": [
+    {
+      "name": "Actor",
+      "description": "Sails blueprint actions for the **Actor** model"
+    },
+    {
+      "name": "View contact"
+    },
+    {
+      "name": "Logout"
+    },
+    {
+      "name": "View welcome page"
+    },
+    {
+      "name": "View homepage or redirect"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "actor": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/actor-without-required-constraint"
+          }
+        ]
+      },
+      "actor-without-required-constraint": {
+        "type": "object",
+        "description": "Sails ORM Model **Actor**",
+        "properties": {
+          "createdAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "updatedAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "surname": {
+            "type": "string"
+          },
+          "birthday": {
+            "type": "string"
+          },
+          "movies": {
+            "type": "string"
+          },
+          "plays": {
+            "type": "string"
+          },
+          "foto": {
+            "type": "string"
+          },
+          "prizes": {
+            "type": "string"
+          }
+        }
+      },
+      "movie": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/movie-without-required-constraint"
+          }
+        ]
+      },
+      "movie-without-required-constraint": {
+        "type": "object",
+        "description": "Sails ORM Model **Movie**",
+        "properties": {
+          "createdAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "updatedAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "title": {
+            "type": "string"
+          },
+          "ratings": {
+            "type": "number",
+            "format": "double"
+          },
+          "cast": {},
+          "isReleased": {
+            "type": "boolean"
+          },
+          "isPlaying": {
+            "type": "boolean"
+          },
+          "isSeries": {
+            "type": "boolean"
+          },
+          "releasedTimestamp": {
+            "type": "string"
+          }
+        }
+      },
+      "plays": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/plays-without-required-constraint"
+          }
+        ]
+      },
+      "plays-without-required-constraint": {
+        "type": "object",
+        "description": "Sails ORM Model **Plays**",
+        "properties": {
+          "createdAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "updatedAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "title": {
+            "type": "string"
+          },
+          "ratings": {
+            "type": "number",
+            "format": "double"
+          },
+          "cast": {},
+          "isReleased": {
+            "type": "boolean"
+          },
+          "releasedDate": {
+            "type": "string"
+          }
+        }
+      },
+      "review": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/review-without-required-constraint"
+          }
+        ]
+      },
+      "review-without-required-constraint": {
+        "type": "object",
+        "description": "Sails ORM Model **Review**",
+        "properties": {
+          "createdAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "updatedAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "stars": {
+            "type": "number",
+            "format": "double"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "movieId": {
+            "type": "string"
+          }
+        }
+      },
+      "user": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/user-without-required-constraint"
+          },
+          {
+            "required": [
+              "emailAddress",
+              "password",
+              "fullName"
+            ]
+          }
+        ]
+      },
+      "user-without-required-constraint": {
+        "type": "object",
+        "description": "Sails ORM Model **User**",
+        "properties": {
+          "createdAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "updatedAt": {
+            "type": "number",
+            "format": "double"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "uniqueItems": true,
+            "description": "Note Sails special attributes: autoIncrement"
+          },
+          "emailAddress": {
+            "type": "string",
+            "format": "email",
+            "example": "mary.sue@example.com",
+            "maxLength": 200,
+            "uniqueItems": true
+          },
+          "emailStatus": {
+            "type": "string",
+            "default": "confirmed",
+            "description": "The confirmation status of the user's email address.",
+            "enum": [
+              "unconfirmed",
+              "change-requested",
+              "confirmed"
+            ],
+            "example": "confirmed"
+          },
+          "emailChangeCandidate": {
+            "type": "string",
+            "format": "email",
+            "description": "A still-unconfirmed email address that this user wants to change to (if relevant)."
+          },
+          "password": {
+            "type": "string",
+            "description": "Securely hashed representation of the user's login password.",
+            "example": "2$28a8eabna301089103-13948134nad"
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Full representation of the user's name.",
+            "example": "Mary Sue van der McHenst",
+            "maxLength": 120
+          },
+          "isSuperAdmin": {
+            "type": "boolean",
+            "description": "Whether this user is a \"super admin\" with extra permissions, etc."
+          },
+          "passwordResetToken": {
+            "type": "string",
+            "description": "A unique token used to verify the user's identity when recovering a password.  Expires after 1 use, or after a set amount of time has elapsed."
+          },
+          "passwordResetTokenExpiresAt": {
+            "type": "number",
+            "format": "double",
+            "description": "A JS timestamp (epoch ms) representing the moment when this user's `passwordResetToken` will expire (or 0 if the user currently has no such token).",
+            "example": 1502844074211
+          },
+          "emailProofToken": {
+            "type": "string",
+            "description": "A pseudorandom, probabilistically-unique token for use in our account verification emails."
+          },
+          "emailProofTokenExpiresAt": {
+            "type": "number",
+            "format": "double",
+            "description": "A JS timestamp (epoch ms) representing the moment when this user's `emailProofToken` will expire (or 0 if the user currently has no such token).",
+            "example": 1502844074211
+          },
+          "stripeCustomerId": {
+            "type": "string",
+            "description": "The id of the customer entry in Stripe associated with this user (or empty string if this user is not linked to a Stripe customer -- e.g. if billing features are not enabled)."
+          },
+          "hasBillingCard": {
+            "type": "boolean",
+            "description": "Whether this user has a default billing card hooked up as their payment method."
+          },
+          "billingCardBrand": {
+            "type": "string",
+            "description": "The brand of this user's default billing card (or empty string if no billing card is set up).",
+            "example": "Visa"
+          },
+          "billingCardLast4": {
+            "type": "string",
+            "description": "The last four digits of the card number for this user's default billing card (or empty string if no billing card is set up).",
+            "example": "4242"
+          },
+          "billingCardExpMonth": {
+            "type": "string",
+            "description": "The two-digit expiration month from this user's default billing card, formatted as MM (or empty string if no billing card is set up).",
+            "example": "08"
+          },
+          "billingCardExpYear": {
+            "type": "string",
+            "description": "The four-digit expiration year from this user's default billing card, formatted as YYYY (or empty string if no credit card is set up).",
+            "example": "2023"
+          },
+          "lastSeenAt": {
+            "type": "number",
+            "format": "double",
+            "description": "A JS timestamp (epoch ms) representing the moment at which this user most recently interacted with the backend while logged in (or 0 if they have not interacted with the backend at all yet).",
+            "example": 1502844074211
+          }
+        }
+      }
+    },
+    "parameters": {
+      "AttributeFilterParam": {
+        "in": "query",
+        "name": "_*_",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "To filter results based on a particular attribute, specify a query parameter with the same name as the attribute defined on your model. For instance, if our `Purchase` model has an `amount` attribute, we could send `GET /purchase?amount=99.99` to return a list of $99.99 purchases."
+      },
+      "WhereQueryParam": {
+        "in": "query",
+        "name": "where",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Instead of filtering based on a specific attribute, you may instead choose to provide a `where` parameter with the WHERE piece of a [Waterline criteria](https://sailsjs.com/documentation/concepts/models-and-orm/query-language), _encoded as a JSON string_. This allows you to take advantage of `contains`, `startsWith`, and other sub-attribute criteria modifiers for more powerful `find()` queries.\n\ne.g. `?where={\"name\":{\"contains\":\"theodore\"}}`"
+      },
+      "LimitQueryParam": {
+        "in": "query",
+        "name": "limit",
+        "required": false,
+        "schema": {
+          "type": "integer"
+        },
+        "description": "The maximum number of records to send back (useful for pagination). Defaults to 30."
+      },
+      "SkipQueryParam": {
+        "in": "query",
+        "name": "skip",
+        "required": false,
+        "schema": {
+          "type": "integer"
+        },
+        "description": "The number of records to skip (useful for pagination)."
+      },
+      "SortQueryParam": {
+        "in": "query",
+        "name": "sort",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "The sort order. By default, returned records are sorted by primary key value in ascending order.\n\ne.g. `?sort=lastName%20ASC`"
+      }
+    }
+  },
+  "paths": {
+    "/contact": {
+      "get": {
+        "summary": "View contact",
+        "description": "Display \"Contact\" page.",
+        "tags": [
+          "View contact"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/actor": {
+      "post": {
+        "summary": "Actor",
+        "description": "This action if for select Actor entries.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Actor name"
+          },
+          {
+            "in": "query",
+            "name": "surname",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Actor surname."
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The description of the actor information related to films, television series, home videos, video games, and streaming content online – including cast, production crew and personal biographies, plot summaries, Biography, Filmography, trivia, ratings, and fan and critical reviews."
+          },
+          {
+            "in": "query",
+            "name": "birthday",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "date of birth, birthday"
+          },
+          {
+            "in": "query",
+            "name": "movies",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filmography the movies, films that the actor was part of cast, tv series, etc"
+          },
+          {
+            "in": "query",
+            "name": "plays",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The plays actor has played."
+          },
+          {
+            "in": "query",
+            "name": "prizes",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Years of the awards, actors were nominated as the best in their categories"
+          },
+          {
+            "in": "query",
+            "name": "theatre",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "theatre where actor plays "
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Actor creat cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },
+      "get": {
+        "summary": "Actor",
+        "description": "This action if for select Actor entries. this contains information about his personal life and career, movies, plays and prizes.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "actorId",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Id for an Actor search."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/account/logout": {
+      "get": {
+        "summary": "Logout",
+        "description": "Log out of this app.",
+        "tags": [
+          "Logout"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent has been successfully logged out."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent looks to be a web browser."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },
+      "put": {
+        "summary": "Logout",
+        "description": "Log out of this app.",
+        "tags": [
+          "Logout"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent has been successfully logged out."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent looks to be a web browser."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },
+      "post": {
+        "summary": "Logout",
+        "description": "Log out of this app.",
+        "tags": [
+          "Logout"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent has been successfully logged out."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent looks to be a web browser."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Logout",
+        "description": "Log out of this app.",
+        "tags": [
+          "Logout"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent has been successfully logged out."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent looks to be a web browser."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Logout",
+        "description": "Log out of this app.",
+        "tags": [
+          "Logout"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent has been successfully logged out."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The requesting user agent looks to be a web browser."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/actor/movies/{actorId}": {
+      "get": {
+        "summary": "Actor Movies",
+        "description": "This api is for query actor details. This will contain information on actor plays, movies, other roles like director, scene, prizes or collaborations.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "actorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Id for lookup actor moovies."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "This will return information on actor career, movies, theatre."
+                    },
+                    {
+                      "type": "string",
+                      "description": "Actor call is invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/actor/plays/{actorId}": {
+      "get": {
+        "summary": "Actor Plays",
+        "description": "Aceast API este pentru a interoga piesele unui actor.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "actorId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Id pentru a cauta piesele unui Actor."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Call for getting the actor plays.  This will contain information on actor plays, movies, other roles like director, scene, prizes or collaborations."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The request for this resource is not valid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/actor/{actorId}": {
+      "get": {
+        "summary": "Actor",
+        "description": "This action if for select Actor entries. this contains information about his personal life and career, movies, plays and prizes.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "actorId",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Id for an Actor search."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/welcome/{unused}": {
+      "get": {
+        "summary": "View welcome page",
+        "description": "Display the dashboard \"Welcome\" page.",
+        "tags": [
+          "View welcome page"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "unused",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Route pattern variable `unused`"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Display the welcome page for authenticated users."
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "View homepage or redirect",
+        "description": "Display or redirect to the appropriate homepage, depending on login status.",
+        "tags": [
+          "View homepage or redirect"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Requesting user is a guest, so show the public landing page."
+                    },
+                    {
+                      "type": "string",
+                      "description": "Requesting user is logged in, so redirect to the internal welcome page."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}

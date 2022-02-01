@@ -4,17 +4,14 @@ module.exports = {
 
     friendlyName: 'Actor Movies',
   
-  
-    description: 'Aceast API este pentru a interoga filemele unui actor.',
-  
-  
+    description: 'This api is for query actor details. This will contain information on actor plays, movies, other roles like director, scene, prizes or collaborations.',
     inputs: {
   
         actorId: {
           required: true,
           type: 'string',
-          description: 'Id pentru a cauta filmele unui Actor.',
-          extendedDescription: 'Trebuie sa fie un id de Actor valid.',
+          description: 'Id for lookup actor moovies.',
+          extendedDescription: 'Has to be an actor valid id.',
         },
 
         // movie: {
@@ -29,12 +26,12 @@ module.exports = {
     exits: {
   
       success: {
-        description: 'Apel interogare filme pentru actor cu succes.'
+        description: 'This will return information on actor career, movies, theatre.'
       },
   
       invalid: {
         responseType: 'badRequest',
-        description: 'Apel interogare filme pentru actor este invalid.',
+        description: 'Actor call is invalid.',
         extendedDescription: 'If this request was sent from a graphical user interface, the request '+
         'parameters should have been validated/coerced _before_ they were sent.'
       },

@@ -29,12 +29,12 @@ module.exports = {
     exits: {
   
       success: {
-        description: 'Apel interogare piesele de teatru ale actor cu succes.'
+        description: 'Call for getting the actor plays.  This will contain information on actor plays, movies, other roles like director, scene, prizes or collaborations.'
       },
   
       invalid: {
         responseType: 'badRequest',
-        description: 'Apel interogare piese de teatru pentru actor este invalid.',
+        description: 'The request for this resource is not valid.',
         extendedDescription: 'If this request was sent from a graphical user interface, the request '+
         'parameters should have been validated/coerced _before_ they were sent.'
       },

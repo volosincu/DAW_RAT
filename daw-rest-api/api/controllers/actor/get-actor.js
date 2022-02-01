@@ -5,7 +5,7 @@ module.exports = {
   friendlyName: 'Actor',
 
 
-  description: 'This action if for select Actor entries.',
+  description: 'This action if for select Actor entries. this contains information about his personal life and career, movies, plays and prizes.',
 
 
   inputs: {
@@ -13,7 +13,7 @@ module.exports = {
       actorId: {
         required: false,
         type: 'string',
-        description: 'Id pentru a identifica un Actor.',
+        description: 'Id for an Actor search.',
         extendedDescription: 'Must be a valid actor id.',
       },
   },
