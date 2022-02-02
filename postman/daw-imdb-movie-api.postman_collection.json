@@ -58,12 +58,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie",
+					"raw": "http://localhost:51337/api/v1/movie",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -88,12 +88,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie",
+					"raw": "http://localhost:51337/api/v1/movie",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -118,12 +118,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie",
+					"raw": "http://localhost:51337/api/v1/movie",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -148,12 +148,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie",
+					"raw": "http://localhost:51337/api/v1/movie",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -181,12 +181,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie/cast/yel",
+					"raw": "http://localhost:51337/api/v1/movie/cast/yel",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -216,12 +216,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie/platform/hbo",
+					"raw": "http://localhost:51337/api/v1/movie/platform/hbo",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -251,12 +251,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie/title/terminator",
+					"raw": "http://localhost:51337/api/v1/movie/title/terminator",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -283,12 +283,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie",
+					"raw": "http://localhost:51337/api/v1/movie",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -313,12 +313,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/movie",
+					"raw": "http://localhost:51337/api/v1/movie",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",

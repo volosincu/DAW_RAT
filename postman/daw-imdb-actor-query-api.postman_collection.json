@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "924e836e-0e30-4c10-b960-bde6c7269251",
+		"_postman_id": "a2090e41-cd06-4e5d-a5fa-bd24987bd658",
 		"name": "daw-imdb-actor-query-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -23,12 +23,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor/",
+					"raw": "http://localhost:51337/api/v1/actor/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -57,12 +57,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor/29354302146783806",
+					"raw": "http://localhost:51337/api/v1/actor/29354302146783806",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -91,12 +91,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor/47935227779037004",
+					"raw": "http://localhost:51337/api/v1/actor/47935227779037004",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -125,12 +125,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor/4894372303570109",
+					"raw": "http://localhost:51337/api/v1/actor/4894372303570109",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -159,18 +159,53 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor/plays/29354302146783806",
+					"raw": "http://localhost:51337/api/v1/actor/plays/29354302146783806",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
 						"actor",
 						"plays",
 						"29354302146783806"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor/search/{name}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51337/api/v1/actor/search/anca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51337",
+					"path": [
+						"api",
+						"v1",
+						"actor",
+						"search",
+						"anca"
 					]
 				}
 			},

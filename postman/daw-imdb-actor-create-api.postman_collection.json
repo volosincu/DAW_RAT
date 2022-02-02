@@ -20,12 +20,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor",
+					"raw": "http://localhost:51337/api/v1/actor",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -50,12 +50,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor",
+					"raw": "http://localhost:51337/api/v1/actor",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -80,12 +80,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor",
+					"raw": "http://localhost:51337/api/v1/actor",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -140,12 +140,42 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor",
+					"raw": "http://localhost:51337/api/v1/actor",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
+					"path": [
+						"api",
+						"v1",
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/actor{angelina.jolie}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"angelina\",\r\n    \"surname\": \"jolie\",\r\n    \"description\": \"Angelina Jolie DCMG is an American actress and filmmaker. The recipient of numerous accolades, including an Academy Award and three Golden Globe Awards, she has been named Hollywood's highest-paid actress multiple times.\",\r\n    \"birthday\": \"1975-06-04T22:00:00.000Z\",\r\n    \"movies\": \"Pe malul marii; Lara Croft: Tomb Raider; Tinerete furata; Capcanele seductiei; Gia; O viata aproape perfecta\",\r\n    \"plays\": \"\",\r\n    \"prizes\": \"Oscar, Grammy, Emmy\",\r\n    \"theatre\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51337/api/v1/actor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -170,12 +200,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor",
+					"raw": "http://localhost:51337/api/v1/actor",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
@@ -200,12 +230,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1337/api/v1/actor",
+					"raw": "http://localhost:51337/api/v1/actor",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1337",
+					"port": "51337",
 					"path": [
 						"api",
 						"v1",
