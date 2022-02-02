@@ -29,6 +29,10 @@
       "description": "Sails blueprint actions for the **Actor** model"
     },
     {
+      "name": "Movie",
+      "description": "Sails blueprint actions for the **Movie** model"
+    },
+    {
       "name": "View contact"
     },
     {
@@ -117,21 +121,26 @@
           "title": {
             "type": "string"
           },
+          "year": {
+            "type": "string"
+          },
           "ratings": {
             "type": "number",
             "format": "double"
           },
-          "cast": {},
-          "isReleased": {
+          "cast": {
+            "type": "string"
+          },
+          "serie": {
             "type": "boolean"
           },
-          "isPlaying": {
-            "type": "boolean"
+          "platform": {
+            "type": "string"
           },
-          "isSeries": {
-            "type": "boolean"
+          "description": {
+            "type": "string"
           },
-          "releasedTimestamp": {
+          "imdb": {
             "type": "string"
           }
         }
@@ -413,7 +422,7 @@
     "/api/v1/actor": {
       "post": {
         "summary": "Actor",
-        "description": "This action if for select Actor entries.",
+        "description": "This action is to create Actor entries.",
         "tags": [
           "Actor"
         ],
@@ -534,6 +543,164 @@
               "type": "string"
             },
             "description": "Id for an Actor search."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/movie/": {
+      "post": {
+        "summary": "Movie",
+        "description": "This action is to creating Movie entries.",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Movie title"
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Movie release year"
+          },
+          {
+            "in": "query",
+            "name": "ratings",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "Movie rating"
+          },
+          {
+            "in": "query",
+            "name": "cast",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Movie cast, distribution of actors."
+          },
+          {
+            "in": "query",
+            "name": "serie",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            },
+            "description": "serie"
+          },
+          {
+            "in": "query",
+            "name": "platform",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Actor name"
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "A synopsis should be a detailed description of the entire plot of the title, including spoilers "
+          },
+          {
+            "in": "query",
+            "name": "imdbid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The imdb id of the movie with a extended information about the movies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Movie created with succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/movie": {
+      "get": {
+        "summary": "Actor",
+        "description": "This action is for query Movie entries.",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Title for an Movie search."
           }
         ],
         "responses": {
@@ -742,6 +909,53 @@
         }
       }
     },
+    "/api/v1/actor/search/{name}": {
+      "get": {
+        "summary": "Actor",
+        "description": "This action if for select Actor entries. this contains information about his personal life and career, movies, plays and prizes.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "name",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Name for an Actor search."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
     "/api/v1/actor/movies/{actorId}": {
       "get": {
         "summary": "Actor Movies",
@@ -821,6 +1035,147 @@
                     {
                       "type": "string",
                       "description": "The request for this resource is not valid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/movie/title/{title}": {
+      "get": {
+        "summary": "Actor",
+        "description": "This action is for query Movie entries.",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "title",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Title for an Movie search."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/movie/cast/{cast}": {
+      "get": {
+        "summary": "Actor",
+        "description": "This action is for query Movie entries.",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "cast",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Actor name that was part of the cast."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/movie/platform/{platform}": {
+      "get": {
+        "summary": "Actor",
+        "description": "This action is for query Movie entries.",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "platform",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "A media where the movie can be rented or watched"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
                     }
                   ]
                 }

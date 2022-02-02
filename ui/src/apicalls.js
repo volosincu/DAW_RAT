@@ -23,3 +23,28 @@ export async function callNLP (term) {
     })
     
 }
+
+
+
+export async function getSemanticField (term) {
+
+
+    return new Promise((resolve, reject)=>{
+        axios
+            .get('http://localhost:9000/getSemanticField', {"terms": "title,set"})
+            .then(res => {
+                console.log(`statusCode: ${res.status}`)
+                // debugger
+                if (res.data){
+                    resolve(res.data);
+                }
+
+            })
+            .catch(error => {
+                console.error(error)
+                reject({message: "no data"});
+            })
+
+    })
+    
+}

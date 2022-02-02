@@ -5,6 +5,7 @@ export const initState = {
     term: null,
     results: {},
     rdfdomain: {},
+    queryPaths: {},
 }
 
 

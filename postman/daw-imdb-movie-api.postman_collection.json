@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "732afe18-ff16-4a5e-8969-11c22b16eb4f",
+		"name": "daw-imdb-movie-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/v1/movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie{template}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"\",\r\n    \"year\" : \"\",\r\n    \"ratings\" : \"\",\r\n    \"cast\" : \"\",\r\n    \"serie\" : \"\",\r\n    \"platform\" : \"\",\r\n    \"description\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie{terminator-1}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Terminator\",\r\n    \"year\" : \"1984\",\r\n    \"ratings\" : \"4.0\",\r\n    \"cast\" : \"Arnold Schwarzenegger; Linda Hamilton; Milton Bohne\",\r\n    \"serie\" : \"false\",\r\n    \"platform\" : \"tv;hbo\",\r\n    \"description\" : \"A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity's future salvation.\",\r\n    \"imdbid\": \"tt0088247\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie{terminator-2}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Midnight in Paris\",\r\n    \"year\" : \"1991\",\r\n    \"ratings\" : \"4.6\",\r\n    \"cast\" : \"Owen Wilson; Rachel McAdams; Kathy Bates\",\r\n    \"serie\" : \"false\",\r\n    \"platform\" : \"tv;hbo\",\r\n    \"description\" : \"While on a trip to Paris with his fiancée's family, a nostalgic screenwriter finds himself mysteriously going back to the 1920s every day at midnight.\",\r\n    \"imdbid\": \"tt1605783\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie{terminator-3}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Terminator 3 Suprematia Robotilor\",\r\n    \"year\" : \"2003\",\r\n    \"ratings\" : \"4.3\",\r\n    \"cast\" : \"Arnold Schwarzenegger;Nick Stahl;Kristanna Loken\",\r\n    \"serie\" : \"false\",\r\n    \"platform\" : \"tv;hbo\",\r\n    \"description\" : \"A machine from a post-apocalyptic future travels back in time to protect a man and a woman from an advanced robotic assassin to ensure they both survive a nuclear attack\",\r\n    \"imdbid\": \"tt0181852\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie{terminator-4}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Terminator 4 Salvarea\",\r\n    \"year\" : \"2009\",\r\n    \"ratings\" : \"4.4\",\r\n    \"cast\" : \"Christian BaleSam WorthingtonAnton Yelchin\",\r\n    \"serie\" : \"false\",\r\n    \"platform\" : \"tv;hbo;hulu\",\r\n    \"description\" : \"In 2018, a mysterious new weapon in the war against the machines, half-human and half-machine, comes to John Connor on the eve of a resistance attack on Skynet. But whose side is he on, and can he be trusted?k\",\r\n    \"imdbid\": \"tt0438488\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie/cast/{yelchin}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie/cast/yel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"cast",
+						"yel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie/platform/{hbo}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie/platform/hbo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"platform",
+						"hbo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie/title/{terminator}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie/title/terminator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"title",
+						"terminator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie{midnight-paris}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Midnight in Paris\",\r\n    \"year\" : \"2011\",\r\n    \"ratings\" : \"4.6\",\r\n    \"cast\" : \"Owen Wilson; Rachel McAdams; Kathy Bates\",\r\n    \"serie\" : \"false\",\r\n    \"platform\" : \"netflix;hbo\",\r\n    \"description\" : \"While on a trip to Paris with his fiancée's family, a nostalgic screenwriter finds himself mysteriously going back to the 1920s every day at midnight.\",\r\n    \"imdbid\": \"tt1605783\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/movie{rockye-balboa}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Rocky Balboa\",\r\n    \"year\" : \"2006\",\r\n    \"ratings\" : \"3.1\",\r\n    \"cast\" : \"ylvester Stallone;Antonio Tarver;Milo Ventimiglia\",\r\n    \"serie\" : \"false\",\r\n    \"platform\" : \"tv,online\",\r\n    \"description\" : \"Thirty years after the ring of the first bell, Rocky Balboa comes out of retirement and dons his gloves for his final fight against the reigning heavyweight champ Mason 'The Line' Dixon..\",\r\n    \"imdbid\": \"tt0479143\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

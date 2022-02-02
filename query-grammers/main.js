@@ -4,6 +4,7 @@ const uuid = require('uuid')
 const axios = require('axios')
 const express = require('express')
 const reqParser = require('body-parser')
+const schemaLookup = require('./utils')
 
 var expressPooling = require("express-longpoll")
 const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
@@ -19,32 +20,31 @@ let posResult = {};
 
 app.get('/gramm-query',
     function (req, res) {
+        // axios
+        //     .post('http://localhost:/pos', {
+        //         "text": "My name is John Doe."
+        //     })
+        //     .then(res => {
+        //         console.log(`statusCode: ${res.status}`)
+        //         if (res.data && res.data.data && res.data.data){
+        //             const posData = res.data.data[0];
+        //             posResult['text'] = posData["text"];
+        //             posResult['pos'] = posData.tags.reduce((acc, e)=>{
+        //                 acc = [...acc, e.pos];
+        //                 return acc;
+        //             },[]);
+        //             posResult['join'] = posData.tags.reduce((acc, e)=>{
+        //                 acc = [...acc, {part: e.text, pos: e.pos}];
+        //                 return acc;
+        //             },[]);
+        //         }
 
-        axios
-            .post('http://localhost:18000/pos', {
-                "text": "My name is John Doe."
-            })
-            .then(res => {
-                console.log(`statusCode: ${res.status}`)
-                if (res.data && res.data.data && res.data.data){
-                    const posData = res.data.data[0];
-                    posResult['text'] = posData["text"];
-                    posResult['pos'] = posData.tags.reduce((acc, e)=>{
-                        acc = [...acc, e.pos];
-                        return acc;
-                    },[]);
-                    posResult['join'] = posData.tags.reduce((acc, e)=>{
-                        acc = [...acc, {part: e.text, pos: e.pos}];
-                        return acc;
-                    },[]);
-                }
+        //     })
+        //     .catch(error => {
+        //         console.error(error)
+        //     })
 
-            })
-            .catch(error => {
-                console.error(error)
-            })
-
-        res.send('test gramm-query');
+        res.send({"text":"Trending movies 2022.","pos":["V","NOUN","AUX","PROPN","PROPN","PUNCT"],"join":[{"part":"My","pos":"DET"},{"part":"name","pos":"NOUN"},{"part":"is","pos":"V"},{"part":"John","pos":"PROPN"},{"part":"Doe","pos":"PROPN"},{"part":".","pos":"PUNCT"}]});
     });
 
 app.get('/gramm-queryp',
@@ -53,28 +53,43 @@ app.get('/gramm-queryp',
     });
 
 
-app.post('/top-movies',
+
+app.get('/getSemanticField',
     function (req, res) {
-        console.log(req.body.test);
-        res.send('');
+        console.log("terms ", req.query.terms);
+        let terms = ['cinematography'];
+
+        if (req.query.terms) {
+            terms = [...terms,  ...req.query.terms.split(',')]
+        }
+        
+        const openApi = require("./rdf/openapi.imdb.json");
+        const ontology = require("./rdf/ontology.movie.json");
+        
+        let  paths={},
+            models={}; 
+
+        console.log("lookup paths in openAPI");
+        schemaLookup.getPaths(openApi, "", paths)
+
+        console.log("lookup properties in openAPI");
+        schemaLookup.getModels(openApi, "", models)
+        console.log("lookup resources in RDF documents");
+        const links = schemaLookup.getOntologyLinks(ontology, terms)
+
+        if (!openApi.openapi) {
+            console.error("Not a valid schema");
+            return;
+        }
+
+        res.send({
+            url: openApi.servers.url,
+            links,
+            paths,
+            models,
+        });
     });
 
-// const longpoll = expressPooling(app);
-// longpoll.create("/resuts", (req, res, next)=>{
-//     grammerQL = ()=>{console.log('generate query'); return 'generate query';}
-//     console.log('/resuts');
-//     next();
-// });
-
-// setInterval( function () {
-//     if (grammerQL){
-//         const stats = grammerQL();
-//         longpoll.publish("/resuts", stats);
-//     } else {
-//         longpoll.publish("/resuts", {"mesage": "loading....."});
-//         console.log("loading....")
-//     }
-// }, 10000);
 
 
 app.listen(9000, function () {

@@ -909,6 +909,53 @@
         }
       }
     },
+    "/api/v1/actor/search/{name}": {
+      "get": {
+        "summary": "Actor",
+        "description": "This action if for select Actor entries. this contains information about his personal life and career, movies, plays and prizes.",
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "name",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Name for an Actor search."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Apel interogare model actor cu succes."
+                    },
+                    {
+                      "type": "string",
+                      "description": "The provided fullName, password and/or email address are invalid."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
     "/api/v1/actor/movies/{actorId}": {
       "get": {
         "summary": "Actor Movies",

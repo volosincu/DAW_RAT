@@ -1,4 +1,3 @@
-localDiskDb/*
 **node_modules*
 ui/build*
 .history*

@@ -40,3 +40,16 @@
 .pretty-json-container {
     font-size: 19px;
 }
+
+.semantic-field {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 4vh;
+}
+.semantic-field h2{ 
+    color: rgb(4, 66, 66);
+    font-size: 5vh;
+    font-family: cursive;
+}
+

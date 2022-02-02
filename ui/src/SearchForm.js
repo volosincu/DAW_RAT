@@ -5,7 +5,8 @@ import { actionTypes } from "./reducer";
 import {useHistory} from 'react-router-dom';
 import DawRestContext from './DawRestContext'
 import ReactJson from 'react-json-view'
-import {callNLP} from "./apicalls"
+import {callNLP, getSemanticField} from "./apicalls"
+import { getRESTQuery } from './queryBuilder'
 
 const JsonStyle = {
     propertyStyle: { color: '#c9cd05' },
@@ -13,8 +14,7 @@ const JsonStyle = {
     numberStyle: { color: 'darkorange' }
   }
 
-
-  const sample = {"text":"My name is John Doe.","pos":["DET","NOUN","AUX","PROPN","PROPN","PUNCT"],"join":[{"part":"My","pos":"DET"},{"part":"name","pos":"NOUN"},{"part":"is","pos":"AUX"},{"part":"John","pos":"PROPN"},{"part":"Doe","pos":"PROPN"},{"part":".","pos":"PUNCT"}]}
+  const sample = {"text":"Trending movies 2022.","pos":["V","NOUN","AUX","PROPN","PROPN","PUNCT"],"join":[{"part":"My","pos":"DET"},{"part":"name","pos":"NOUN"},{"part":"is","pos":"V"},{"part":"John","pos":"PROPN"},{"part":"Doe","pos":"PROPN"},{"part":".","pos":"PUNCT"}]}
 
 function Search(){
     const { state, dispatch } = useContext(DawRestContext);
@@ -22,10 +22,19 @@ function Search(){
     const [collapsed, setCollapsed] = useState(false);
     const history = useHistory();
 
-    const search = (e) =>  {
+    const search = async (e) =>  {
         e.preventDefault();
-        dispatch({type: "search", payload: {term: "Guardians of Galaxy"}});
+        
         setShowResults(false);
+
+        // endpoint Andrei
+
+        const semanticField = await getSemanticField("");
+        const queryPaths = getRESTQuery();
+        console.log(semanticField);
+        console.log(queryPaths);
+        dispatch({type: "search", payload: {term: "Guardians of Galaxy", rdfdomain: semanticField, queryPaths: queryPaths}});
+        setShowResults(true);
     }
 
     const onClickShowResults = async (e) =>{
@@ -56,11 +65,16 @@ function Search(){
           
             <div className='results-display'>
                 <div className='view1'>
-                    {showResults ? <ReactJson src={sample} theme="monokai" indentWidth={6} /> : null} 
+                    {showResults ? <ReactJson src={state.queryPaths} theme="monokai" indentWidth={6} /> : null} 
                 </div>
                 <div className='view2'>
                     {showResults ? <ReactJson src={state.results} theme="monokai" indentWidth={6} /> : null} 
                 </div>
+
+            </div>
+            <div class="semantic-field">
+                <h2>Semantic field</h2>
+                {showResults ? <ReactJson src={state.rdfdomain} theme="monokai" indentWidth={6} collapsed={true} /> : null} 
             </div>
         </>
     );
