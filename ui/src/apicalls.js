@@ -6,7 +6,7 @@ export async function callNLP (term) {
 
     return new Promise((resolve, reject)=>{
         axios
-            .post('http://localhost:34567/parse', {"text":term})
+            .post('http://localhost:34567/parse', {"text":term, "rdf_domains":["actor", "movie"]})
             .then(res => {
                 console.log(`statusCode: ${res.status}`)
                 // debugger

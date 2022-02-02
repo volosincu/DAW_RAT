@@ -22,18 +22,19 @@ function Home() {
     
     return (     
         <div className="home">
-            <header className="homeHeader">
+             <header className="homeHeader">
                 <img src={FilmRoll} className="logo" alt="FilmRoll" />
-                <span style={{fontSize: 50, color:"#15434a"}}>D</span>
-                <span style={{fontSize: 50, color:"#81d8d0"}}>a</span>
-                <span style={{fontSize: 50, color:"#176a71"}}>w</span>
-                <span style={{fontSize: 50, color:"#81d8d0"}}>R</span>
-                <span style={{fontSize: 50, color:"#356b76"}}>e</span>
-                <span style={{fontSize: 50, color:"#0095a4"}}>s</span>
-                <span style={{fontSize: 50, color:"#81d8d0"}}>t</span>
-                <span style={{fontSize: 50, color:"#0095a4"}}>A</span>
-                <span style={{fontSize: 50, color:"#176a71"}}>p</span>
-                <span style={{fontSize: 50, color:"#15434a"}}>i</span>
+                <span style={{fontSize: 50, color:"#15434a"}}>R</span>
+                <span style={{fontSize: 50, color:"#81d8d0"}}>E</span>
+                <span style={{fontSize: 50, color:"#176a71"}}>S</span>
+                <span style={{fontSize: 50, color:"#81d8d0"}}>T</span>
+                <span style={{fontSize: 50, color:"#356b76"}}>m</span>
+                <span style={{fontSize: 50, color:"#0095a4"}}>a</span>
+                <span style={{fontSize: 50, color:"#81d8d0"}}>n</span>
+                <span style={{fontSize: 50, color:"#0095a4"}}>t</span>
+                <span style={{fontSize: 50, color:"#176a71"}}>i</span>
+                <span style={{fontSize: 50, color:"#15434a"}}>c</span>
+                <span style={{fontSize: 50, color:"#176a71"}}>s</span>
             </header>
             <body>
                 <div className='row'>

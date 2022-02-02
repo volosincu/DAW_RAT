@@ -14,36 +14,36 @@ const JsonStyle = {
     numberStyle: { color: 'darkorange' }
   }
 
-  const sample = {
-    "nouns": [
-        "film",
-        "scene",
-    ],
-    "verbs": [
-        "want",
-        "see"
-    ],
-    "rdf_domains": [
-        "actor",
-        "movie",
-        "cinema"
-    ],
-    "similarities": {
-        "film": [
-            0.4444444444444444,
-            1.0,
-            0.625
-        ],
-        "scene": [
-            0.6444,
-            0.0,
-            0.625
-        ],
-    },
-    "names": [
-        "Tereminator"
-    ]
-};
+//   const sample = {
+//     "nouns": [
+//         "film",
+//         "scene",
+//     ],
+//     "verbs": [
+//         "want",
+//         "see"
+//     ],
+//     "rdf_domains": [
+//         "actor",
+//         "movie",
+//         "cinema"
+//     ],
+//     "similarities": {
+//         "film": [
+//             0.4444444444444444,
+//             1.0,
+//             0.625
+//         ],
+//         "scene": [
+//             0.6444,
+//             0.0,
+//             0.625
+//         ],
+//     },
+//     "names": [
+//         "Tereminator"
+//     ]
+// };
 
 
 
@@ -57,7 +57,7 @@ function Search(){
 
     const search = async (e) =>  {
         e.preventDefault();
-        // const results = await callNLP(state.term);
+        const sample = await callNLP(state.term);
         const semanticField = await getSemanticField("");
 
         const queryTargets = getRESTmanticTargets(sample);
