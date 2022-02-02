@@ -3,10 +3,10 @@ import nltk
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
 
-# nltk.download('punkt')
-# nltk.download('averaged_perceptron_tagger')
-# nltk.download('omw-1.4')
-# nltk.download('brown')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('omw-1.4')
+nltk.download('brown')
 
 lemmatizer = WordNetLemmatizer()
 
