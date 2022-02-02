@@ -6,7 +6,7 @@ import {useHistory} from 'react-router-dom';
 import DawRestContext from './DawRestContext'
 import ReactJson from 'react-json-view'
 import {callNLP, getSemanticField} from "./apicalls"
-import { getRESTQuery } from './queryBuilder'
+import { getRESTmanticTargets, getRESTmanticQuery, executeQuery } from './queryBuilder'
 
 const JsonStyle = {
     propertyStyle: { color: '#c9cd05' },
@@ -14,7 +14,40 @@ const JsonStyle = {
     numberStyle: { color: 'darkorange' }
   }
 
-  const sample = {"text":"Trending movies 2022.","pos":["V","NOUN","AUX","PROPN","PROPN","PUNCT"],"join":[{"part":"My","pos":"DET"},{"part":"name","pos":"NOUN"},{"part":"is","pos":"V"},{"part":"John","pos":"PROPN"},{"part":"Doe","pos":"PROPN"},{"part":".","pos":"PUNCT"}]}
+  const sample = {
+    "nouns": [
+        "film",
+        "scene",
+    ],
+    "verbs": [
+        "want",
+        "see"
+    ],
+    "rdf_domains": [
+        "actor",
+        "movie",
+        "cinema"
+    ],
+    "similarities": {
+        "film": [
+            0.4444444444444444,
+            1.0,
+            0.625
+        ],
+        "scene": [
+            0.6444,
+            0.0,
+            0.625
+        ],
+    },
+    "names": [
+        "Tereminator"
+    ]
+};
+
+
+
+
 
 function Search(){
     const { state, dispatch } = useContext(DawRestContext);
@@ -24,23 +57,31 @@ function Search(){
 
     const search = async (e) =>  {
         e.preventDefault();
-        
-        setShowResults(false);
-
-        // endpoint Andrei
-
+        // const results = await callNLP(state.term);
         const semanticField = await getSemanticField("");
-        const queryPaths = getRESTQuery();
-        console.log(semanticField);
-        console.log(queryPaths);
-        dispatch({type: "search", payload: {term: "Guardians of Galaxy", rdfdomain: semanticField, queryPaths: queryPaths}});
+
+        const queryTargets = getRESTmanticTargets(sample);
+        const queries = getRESTmanticQuery(queryTargets);
+        console.log(queries);
+
+        dispatch({type: "search", payload: {term: "Guardians of Galaxy", rdfdomain: semanticField, queryPaths: queries, names: queryTargets.names}});
         setShowResults(true);
     }
 
     const onClickShowResults = async (e) =>{
-        const results = await callNLP(state.term);
-        dispatch({type: "results", payload: {results: results}});
-        setShowResults(true);
+        
+
+        const promises = [];
+        
+        state.queryPaths.forEach(obj=>{
+            obj.queries.forEach(q=>{
+                promises.push(executeQuery('http://localhost:51337', q.action, state.names[0]))
+            }) 
+         })
+    
+         Promise.all(promises).then((values) => {
+            dispatch({type: "results", payload: {results: values}});
+          });
     }
   
    
@@ -60,7 +101,7 @@ function Search(){
                 <button type="button"  id = "searchButton" onClick={search} ><BiRocket/></button>
             </div>
             <div className='row-c'>
-                <button className='buttonClass' id='buttonId' onClick={onClickShowResults}>Afisează rezultate</button>
+            {showResults ? <button className='buttonClass' id='buttonId' onClick={onClickShowResults}>Rulează queries</button> : <></>}
             </div>
           
             <div className='results-display'>

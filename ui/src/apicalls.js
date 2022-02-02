@@ -19,17 +19,12 @@ export async function callNLP (term) {
                 console.error(error)
                 reject({message: "no data"});
             })
-
-    })
-    
+    })   
 }
-
-
 
 export async function getSemanticField (term) {
 
-
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve, reject)=> {
         axios
             .get('http://localhost:9000/getSemanticField', {"terms": "title,set"})
             .then(res => {

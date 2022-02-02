@@ -2,6 +2,7 @@
 export const resources = {
     createActor: { tag:"", method: 'post', action: ()=>`/api/v1/actor` },
     actorById: { tag:'actor', method: 'get', action: (actorId)=>`/api/v1/actor/${actorId}` },
+    actorSearch:  { tag:'search actor', method: 'get', action: (str)=>`/api/v1/actor/search/${str}` },
     actors: { tag:'*actor', method: 'get', action: ()=>`/api/v1/actor` },
     actorMoviesByActorId: { tag:'actormovie', method: 'get', action: (actorId)=>`/api/v1/actor/movies/${actorId}` },
     actorPlaysByActorId: { tag:'plays', method: 'get', action: (actorId)=>`/api/v1/actor/plays/${actorId}` },
